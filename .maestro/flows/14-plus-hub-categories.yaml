@@ -8,7 +8,6 @@ name: Sard 1.1 «سَرد+» hub and the eight category screens
 - waitForAnimationToEnd
 - tapOn:
     id: "more-sard-plus"
-    optional: true
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-11-plus-hub
@@ -16,9 +15,22 @@ name: Sard 1.1 «سَرد+» hub and the eight category screens
 - scroll
 - takeScreenshot: v11-12-plus-hub-categories
 - runFlow: ../subflows/healthy.yaml
+# --- category reading: bring the card into view (it may be above or below), open it, come back to the hub
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-reading"
+    direction: UP
+    timeout: 6000
+    centerElement: true
+    optional: true
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-reading"
+    direction: DOWN
+    timeout: 8000
+    centerElement: true
 - tapOn:
     id: "sard-plus-cat-reading"
-    optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-13-reading-tools
 - runFlow: ../subflows/healthy.yaml
@@ -26,67 +38,175 @@ name: Sard 1.1 «سَرد+» hub and the eight category screens
 - takeScreenshot: v11-13b-reading-tools
 - runFlow: ../subflows/healthy.yaml
 - back
+- waitForAnimationToEnd
 - runFlow: ../subflows/healthy.yaml
+- assertVisible:
+    id: "sard-plus-cat-.*"
+# --- category library: bring the card into view (it may be above or below), open it, come back to the hub
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-library"
+    direction: UP
+    timeout: 6000
+    centerElement: true
+    optional: true
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-library"
+    direction: DOWN
+    timeout: 8000
+    centerElement: true
 - tapOn:
     id: "sard-plus-cat-library"
-    optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-14-library-tools
 - runFlow: ../subflows/healthy.yaml
 - back
-- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
+- runFlow: ../subflows/healthy.yaml
+- assertVisible:
+    id: "sard-plus-cat-.*"
+# --- category offline: bring the card into view (it may be above or below), open it, come back to the hub
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-offline"
+    direction: UP
+    timeout: 6000
+    centerElement: true
+    optional: true
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-offline"
+    direction: DOWN
+    timeout: 8000
+    centerElement: true
 - tapOn:
     id: "sard-plus-cat-offline"
-    optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-15-storage
 - runFlow: ../subflows/healthy.yaml
 - back
-- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
+- runFlow: ../subflows/healthy.yaml
+- assertVisible:
+    id: "sard-plus-cat-.*"
+# --- category motivation: bring the card into view (it may be above or below), open it, come back to the hub
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-motivation"
+    direction: UP
+    timeout: 6000
+    centerElement: true
+    optional: true
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-motivation"
+    direction: DOWN
+    timeout: 8000
+    centerElement: true
 - tapOn:
     id: "sard-plus-cat-motivation"
-    optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-16-achievements
 - runFlow: ../subflows/healthy.yaml
 - back
-- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
+- runFlow: ../subflows/healthy.yaml
+- assertVisible:
+    id: "sard-plus-cat-.*"
+# --- category custom: bring the card into view (it may be above or below), open it, come back to the hub
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-custom"
+    direction: UP
+    timeout: 6000
+    centerElement: true
+    optional: true
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-custom"
+    direction: DOWN
+    timeout: 8000
+    centerElement: true
 - tapOn:
     id: "sard-plus-cat-custom"
-    optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-17-look-feel
 - runFlow: ../subflows/healthy.yaml
 - back
-- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
+- runFlow: ../subflows/healthy.yaml
+- assertVisible:
+    id: "sard-plus-cat-.*"
+# --- category localAi: bring the card into view (it may be above or below), open it, come back to the hub
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-localAi"
+    direction: UP
+    timeout: 6000
+    centerElement: true
+    optional: true
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-localAi"
+    direction: DOWN
+    timeout: 8000
+    centerElement: true
 - tapOn:
     id: "sard-plus-cat-localAi"
-    optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-18-local-ai
 - runFlow: ../subflows/healthy.yaml
 - back
-- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
+- runFlow: ../subflows/healthy.yaml
+- assertVisible:
+    id: "sard-plus-cat-.*"
+# --- category privacy: bring the card into view (it may be above or below), open it, come back to the hub
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-privacy"
+    direction: UP
+    timeout: 6000
+    centerElement: true
+    optional: true
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-privacy"
+    direction: DOWN
+    timeout: 8000
+    centerElement: true
 - tapOn:
     id: "sard-plus-cat-privacy"
-    optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-19-privacy
 - runFlow: ../subflows/healthy.yaml
 - back
-- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
+- runFlow: ../subflows/healthy.yaml
+- assertVisible:
+    id: "sard-plus-cat-.*"
+# --- category tools: bring the card into view (it may be above or below), open it, come back to the hub
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-tools"
+    direction: UP
+    timeout: 6000
+    centerElement: true
+    optional: true
+- scrollUntilVisible:
+    element:
+      id: "sard-plus-cat-tools"
+    direction: DOWN
+    timeout: 8000
+    centerElement: true
 - tapOn:
     id: "sard-plus-cat-tools"
-    optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-20-backup-tools
 - runFlow: ../subflows/healthy.yaml
 - back
-- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
+- runFlow: ../subflows/healthy.yaml
+- assertVisible:
+    id: "sard-plus-cat-.*"

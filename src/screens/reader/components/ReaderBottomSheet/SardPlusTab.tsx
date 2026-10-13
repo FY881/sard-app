@@ -52,14 +52,19 @@ const SardPlusTab: React.FC = () => {
   const sounds = useEntitlement('reading.pageSounds');
   const profileGate = useEntitlement('reading.readerProfiles', profiles.profiles.length);
 
+  const chapterId = chapter?.id;
   const reload = useCallback(() => {
-    chapterBookmarks(chapter.id).then(setMarks).catch(() => setMarks([]));
-  }, [chapter.id]);
+    if (chapterId == null) {
+      setMarks([]);
+      return;
+    }
+    chapterBookmarks(chapterId).then(setMarks).catch(() => setMarks([]));
+  }, [chapterId]);
   useEffect(reload, [reload]);
 
   const patch = (p: Partial<typeof settings>) => setSettings({ ...plusReaderSettings.get(), ...p });
 
-  const words = session.chapterId === chapter.id ? session.words : 0;
+  const words = chapterId != null && session.chapterId === chapterId ? session.words : 0;
   const speed = wpm?.wpm ?? DEFAULT_WPM.ar;
   const left = Math.max(0, Math.ceil((words * (1 - session.progress)) / speed));
 
@@ -82,7 +87,13 @@ const SardPlusTab: React.FC = () => {
   const jump = (p: number) =>
     webViewRef.current?.injectJavaScript(`try{window.sardPlus&&sardPlus.jump(${Number(p) || 0})}catch(e){};true;`);
 
-  const bound = profiles.bindings[String(novel.id)];
+  const bound = novel ? profiles.bindings[String(novel.id)] : undefined;
+
+  if (!novel || !chapter) {
+    // Rendered without a chapter (should not happen once the sheet bridges the
+    // context) - show nothing rather than crash the reader.
+    return <View testID="sard-plus-reader-tab" />;
+  }
 
   return (
     <Suspense fallback={<></>}>

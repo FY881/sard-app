@@ -57,6 +57,25 @@ export const useChapterContext = () => {
   return useContext(ChapterContext);
 };
 
+/**
+ * Re-provides the chapter context across a portal. `@gorhom/bottom-sheet`'s
+ * BottomSheetModal renders its content in the root BottomSheetModalProvider,
+ * i.e. OUTSIDE ChapterContextProvider, so a tab inside the reader sheet would
+ * otherwise read the empty default value (novel/chapter undefined). Read the
+ * context where the sheet is declared and wrap the sheet's content in this.
+ */
+export function ChapterContextBridge({
+  value,
+  children,
+}: {
+  value: ChapterContextType;
+  children: React.ReactNode;
+}) {
+  return (
+    <ChapterContext.Provider value={value}>{children}</ChapterContext.Provider>
+  );
+}
+
 export const useReaderChromeHidden = () => {
   return useContext(ReaderChromeHiddenContext);
 };

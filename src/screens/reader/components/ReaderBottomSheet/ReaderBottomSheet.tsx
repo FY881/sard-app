@@ -31,6 +31,7 @@ import ReaderFontPicker from './ReaderFontPicker';
 import TTSTab from './TTSTab';
 import SardArabicTab from './SardArabicTab';
 import SardPlusTab from './SardPlusTab';
+import { ChapterContextBridge, useChapterContext } from '../../ChapterContext';
 import { SARD_READER_STRINGS } from '../../../../sard/reader/strings';
 import { BottomSheetModalMethods } from '@gorhom/bottom-sheet/lib/typescript/types';
 import { StringMap } from '@i18n/types';
@@ -233,6 +234,9 @@ const ReaderBottomSheetV2: React.FC<ReaderBottomSheetV2Props> = ({
 }) => {
   const theme = useTheme();
   const layout = useWindowDimensions();
+  // The sheet is a BottomSheetModal, portalled outside ChapterContextProvider:
+  // carry the chapter context across so the «العربية»/«سَرد+» tabs see it.
+  const chapterContext = useChapterContext();
 
   const tabHeaderColor = theme.surfaceContainerLow ?? theme.surface;
 
@@ -277,6 +281,7 @@ const ReaderBottomSheetV2: React.FC<ReaderBottomSheetV2Props> = ({
   return (
     <BottomSheet bottomSheetRef={bottomSheetRef} snapPoints={[360, 600]}>
       <BottomSheetView style={styles.flex}>
+        <ChapterContextBridge value={chapterContext}>
         <TabView
           commonOptions={{
             label: renderLabel,
@@ -292,6 +297,7 @@ const ReaderBottomSheetV2: React.FC<ReaderBottomSheetV2Props> = ({
           lazy
           renderLazyPlaceholder={renderLazyPlaceholder}
         />
+        </ChapterContextBridge>
       </BottomSheetView>
     </BottomSheet>
   );

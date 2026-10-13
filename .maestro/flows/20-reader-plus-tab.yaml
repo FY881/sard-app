@@ -35,6 +35,9 @@ name: Sard 1.1 reader «سَرد+» tab (reader reached through reader mode, as 
 - waitForAnimationToEnd
 - takeScreenshot: v11-48-reader-plus-tab
 - runFlow: ../subflows/healthy.yaml
+# the real tab (needs the chapter context bridged into the sheet's portal)
+- assertVisible:
+    id: "sard-bookmark-add"
 - scroll
 - takeScreenshot: v11-49-reader-plus-tab-b
 - runFlow: ../subflows/healthy.yaml
