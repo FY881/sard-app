@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="sard" tests="1" failures="0" time="51.64" timestamp="2026-10-13T16:16:48">
+    <testcase id="Sard 1.1 paywall (locked yearly wrap on the free tier) and feature directory" name="Sard 1.1 paywall (locked yearly wrap on the free tier) and feature directory" classname="Sard 1.1 paywall (locked yearly wrap on the free tier) and feature directory" file=".maestro/flows/13-paywall-features.yaml" time="51.614" timestamp="2026-10-13T16:16:48" status="SUCCESS"/>
+  </testsuite>
+</testsuites>

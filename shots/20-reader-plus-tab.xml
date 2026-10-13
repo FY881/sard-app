@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="sard" tests="1" failures="0" time="74.056" timestamp="2026-10-13T16:26:56">
+    <testcase id="Sard 1.1 reader «سَرد+» tab (reader reached through reader mode, as in flow 02)" name="Sard 1.1 reader «سَرد+» tab (reader reached through reader mode, as in flow 02)" classname="Sard 1.1 reader «سَرد+» tab (reader reached through reader mode, as in flow 02)" file=".maestro/flows/20-reader-plus-tab.yaml" time="74.036" timestamp="2026-10-13T16:26:56" status="SUCCESS"/>
+  </testsuite>
+</testsuites>

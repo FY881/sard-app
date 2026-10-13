@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="sard" tests="1" failures="0" time="74.952" timestamp="2026-10-13T16:25:02">
+    <testcase id="Sard 1.1 privacy - set a PIN, then always remove it so later flows are not locked" name="Sard 1.1 privacy - set a PIN, then always remove it so later flows are not locked" classname="Sard 1.1 privacy - set a PIN, then always remove it so later flows are not locked" file=".maestro/flows/18-privacy.yaml" time="74.924" timestamp="2026-10-13T16:25:03" status="SUCCESS"/>
+  </testsuite>
+</testsuites>

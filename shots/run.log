@@ -1,0 +1,2668 @@
++ mkdir -p shots
++ touch /tmp/start
++ adb wait-for-device
+++ adb shell getprop sys.boot_completed
+++ tr -d '\r'
++ '[' 1 = 1 ']'
++ adb shell settings put global hide_error_dialogs 1
++ adb shell settings put secure anr_show_background 0
++ adb shell settings put global window_animation_scale 0
++ adb shell settings put global transition_animation_scale 0
++ adb shell settings put global animator_duration_scale 0
++ adb shell am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS
++ sleep 45
++ WD=2882
++ true
++ adb install -r apk/Sard-1.1.0-r14.apk
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+Performing Streamed Install
+Success
++ adb shell settings put system system_locales ar-EG
++ adb shell monkey -p app.sard.reader -c android.intent.category.LAUNCHER 1
+  bash arg: -p
+  bash arg: app.sard.reader
+  bash arg: -c
+  bash arg: android.intent.category.LAUNCHER
+  bash arg: 1
+args: [-p, app.sard.reader, -c, android.intent.category.LAUNCHER, 1]
+ arg: "-p"
+ arg: "app.sard.reader"
+ arg: "-c"
+ arg: "android.intent.category.LAUNCHER"
+ arg: "1"
+data="app.sard.reader"
+data="android.intent.category.LAUNCHER"
+Events injected: 1
+## Network stats: elapsed time=20ms (0ms mobile, 0ms wifi, 20ms not connected)
++ sleep 40
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ adb exec-out screencap -p
++ :
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/01-tabs.yaml .yaml
++ name=01-tabs
++ maestro test --format junit --output shots/01-tabs.xml --test-output-dir maestro-out/01-tabs .maestro/flows/01-tabs.yaml
+Anonymous analytics enabled. To opt out, set MAESTRO_CLI_NO_ANALYTICS environment variable to any value before running Maestro.
+
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] Bottom tabs and More screen (42s)
+
+1/1 Flow Passed in 42s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{e1a2b63 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{c0c3be7 u0 app.sard.reader/.MainActivity t14}'
++ echo '  mCurrentFocus=Window{e1a2b63 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{c0c3be7 u0 app.sard.reader/.MainActivity t14}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/02-reader-from-url.yaml .yaml
++ name=02-reader-from-url
++ maestro test --format junit --output shots/02-reader-from-url.xml --test-output-dir maestro-out/02-reader-from-url .maestro/flows/02-reader-from-url.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] Reader mode URL -> save as chapter -> reader sheet tabs -> novel export/AI (2m 54s)
+
+1/1 Flow Passed in 2m 54s
+
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{7f8b344 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{76838dd u0 app.sard.reader/.MainActivity t16}'
++ echo '  mCurrentFocus=Window{7f8b344 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{76838dd u0 app.sard.reader/.MainActivity t16}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/03-highlights.yaml .yaml
++ name=03-highlights
++ maestro test --format junit --output shots/03-highlights.xml --test-output-dir maestro-out/03-highlights .maestro/flows/03-highlights.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] 03-highlights (23s)
+
+1/1 Flow Passed in 23s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{197f04a u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{b410592 u0 app.sard.reader/.MainActivity t17}'
++ echo '  mCurrentFocus=Window{197f04a u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{b410592 u0 app.sard.reader/.MainActivity t17}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/04-stats-goals.yaml .yaml
++ name=04-stats-goals
++ maestro test --format junit --output shots/04-stats-goals.xml --test-output-dir maestro-out/04-stats-goals .maestro/flows/04-stats-goals.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] 04-stats-goals (25s)
+
+1/1 Flow Passed in 25s
+
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{9605990 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{8b048f5 u0 app.sard.reader/.MainActivity t18}'
++ echo '  mCurrentFocus=Window{9605990 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{8b048f5 u0 app.sard.reader/.MainActivity t18}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/05-ai-settings.yaml .yaml
++ name=05-ai-settings
++ maestro test --format junit --output shots/05-ai-settings.xml --test-output-dir maestro-out/05-ai-settings .maestro/flows/05-ai-settings.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] 05-ai-settings (25s)
+
+1/1 Flow Passed in 26s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{d664304 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{10ab65b u0 app.sard.reader/.MainActivity t19}'
++ echo '  mCurrentFocus=Window{d664304 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{10ab65b u0 app.sard.reader/.MainActivity t19}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/06-agents.yaml .yaml
++ name=06-agents
++ maestro test --format junit --output shots/06-agents.xml --test-output-dir maestro-out/06-agents .maestro/flows/06-agents.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] 06-agents (45s)
+
+1/1 Flow Passed in 45s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{570620e u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{1bbf462 u0 app.sard.reader/.MainActivity t21}'
++ echo '  mCurrentFocus=Window{570620e u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{1bbf462 u0 app.sard.reader/.MainActivity t21}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/07-smart-shelves.yaml .yaml
++ name=07-smart-shelves
++ maestro test --format junit --output shots/07-smart-shelves.xml --test-output-dir maestro-out/07-smart-shelves .maestro/flows/07-smart-shelves.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] 07-smart-shelves (23s)
+
+1/1 Flow Passed in 23s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{f77ca7 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{5685e5c u0 app.sard.reader/.MainActivity t22}'
++ echo '  mCurrentFocus=Window{f77ca7 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{5685e5c u0 app.sard.reader/.MainActivity t22}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/08-recommendations.yaml .yaml
++ name=08-recommendations
++ maestro test --format junit --output shots/08-recommendations.xml --test-output-dir maestro-out/08-recommendations .maestro/flows/08-recommendations.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] 08-recommendations (23s)
+
+1/1 Flow Passed in 23s
+
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{c9c693b u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{a7fd2e0 u0 app.sard.reader/.MainActivity t23}'
++ echo '  mCurrentFocus=Window{c9c693b u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{a7fd2e0 u0 app.sard.reader/.MainActivity t23}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/09-reader-mode.yaml .yaml
++ name=09-reader-mode
++ maestro test --format junit --output shots/09-reader-mode.xml --test-output-dir maestro-out/09-reader-mode .maestro/flows/09-reader-mode.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] Reader mode for a URL (البخلاء on Arabic Wikisource) (1m 14s)
+
+1/1 Flow Passed in 1m 14s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{4850f4b u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{1dfac29 u0 app.sard.reader/.MainActivity t25}'
++ echo '  mCurrentFocus=Window{4850f4b u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{1dfac29 u0 app.sard.reader/.MainActivity t25}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/10-repositories.yaml .yaml
++ name=10-repositories
++ maestro test --format junit --output shots/10-repositories.xml --test-output-dir maestro-out/10-repositories .maestro/flows/10-repositories.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] 10-repositories (35s)
+
+1/1 Flow Passed in 35s
+
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{3529d72 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{713d2db u0 app.sard.reader/.MainActivity t26}'
++ echo '  mCurrentFocus=Window{3529d72 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{713d2db u0 app.sard.reader/.MainActivity t26}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/11-settings-appearance.yaml .yaml
++ name=11-settings-appearance
++ maestro test --format junit --output shots/11-settings-appearance.xml --test-output-dir maestro-out/11-settings-appearance .maestro/flows/11-settings-appearance.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] 11-settings-appearance (31s)
+
+1/1 Flow Passed in 31s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{da4a97c u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{f68bd6d u0 app.sard.reader/.MainActivity t27}'
++ echo '  mCurrentFocus=Window{da4a97c u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{f68bd6d u0 app.sard.reader/.MainActivity t27}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/12-membership.yaml .yaml
++ name=12-membership
++ maestro test --format junit --output shots/12-membership.xml --test-output-dir maestro-out/12-membership .maestro/flows/12-membership.yaml
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] Sard 1.1 membership hub, comparison table, activate-code dialog (1m 8s)
+
+1/1 Flow Passed in 1m 8s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{bf57a9e u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{ea932a7 u0 app.sard.reader/.MainActivity t29}'
++ echo '  mCurrentFocus=Window{bf57a9e u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{ea932a7 u0 app.sard.reader/.MainActivity t29}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/13-paywall-features.yaml .yaml
++ name=13-paywall-features
++ maestro test --format junit --output shots/13-paywall-features.xml --test-output-dir maestro-out/13-paywall-features .maestro/flows/13-paywall-features.yaml
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] Sard 1.1 paywall (locked yearly wrap on the free tier) and feature directory (52s)
+
+1/1 Flow Passed in 52s
+
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{827bcbb u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{7087060 u0 app.sard.reader/.MainActivity t31}'
++ echo '  mCurrentFocus=Window{827bcbb u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{7087060 u0 app.sard.reader/.MainActivity t31}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/14-plus-hub-categories.yaml .yaml
++ name=14-plus-hub-categories
++ maestro test --format junit --output shots/14-plus-hub-categories.xml --test-output-dir maestro-out/14-plus-hub-categories .maestro/flows/14-plus-hub-categories.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] Sard 1.1 «سَرد+» hub and the eight category screens (1m 57s)
+
+1/1 Flow Passed in 1m 57s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{faa34ca u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{d19b96a u0 app.sard.reader/.MainActivity t32}'
++ echo '  mCurrentFocus=Window{faa34ca u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{d19b96a u0 app.sard.reader/.MainActivity t32}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/15-plus-screens.yaml .yaml
++ name=15-plus-screens
++ maestro test --format junit --output shots/15-plus-screens.xml --test-output-dir maestro-out/15-plus-screens .maestro/flows/15-plus-screens.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
+[Passed] Sard 1.1 category screens in depth (deep links) (3m 40s)
+
+1/1 Flow Passed in 3m 40s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{980570d u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{b205d26 u0 app.sard.reader/.MainActivity t42}'
++ echo '  mCurrentFocus=Window{980570d u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{b205d26 u0 app.sard.reader/.MainActivity t42}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/16-achievements-wrap.yaml .yaml
++ name=16-achievements-wrap
++ maestro test --format junit --output shots/16-achievements-wrap.xml --test-output-dir maestro-out/16-achievements-wrap .maestro/flows/16-achievements-wrap.yaml
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] Sard 1.1 achievements, daily challenge, wrap-up (50s)
+
+1/1 Flow Passed in 50s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{18e0933 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{aea6424 u0 app.sard.reader/.MainActivity t44}'
++ echo '  mCurrentFocus=Window{18e0933 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{aea6424 u0 app.sard.reader/.MainActivity t44}'
++ true
++ grep -q app.sard.reader
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ sleep 3
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/17-look-feel.yaml .yaml
++ name=17-look-feel
++ maestro test --format junit --output shots/17-look-feel.xml --test-output-dir maestro-out/17-look-feel .maestro/flows/17-look-feel.yaml
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] Sard 1.1 look & feel (themes, ornaments, drop cap) (27s)
+
+1/1 Flow Passed in 27s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{cff33f8 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{a61f726 u0 app.sard.reader/.MainActivity t45}'
++ echo '  mCurrentFocus=Window{cff33f8 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{a61f726 u0 app.sard.reader/.MainActivity t45}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/18-privacy.yaml .yaml
++ name=18-privacy
++ maestro test --format junit --output shots/18-privacy.xml --test-output-dir maestro-out/18-privacy .maestro/flows/18-privacy.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] Sard 1.1 privacy - set a PIN, then always remove it so later flows are not locked (1m 15s)
+
+1/1 Flow Passed in 1m 15s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{d34237c u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{c9dfbf0 u0 app.sard.reader/.MainActivity t46}'
++ echo '  mCurrentFocus=Window{d34237c u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{c9dfbf0 u0 app.sard.reader/.MainActivity t46}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/19-storage.yaml .yaml
++ name=19-storage
++ maestro test --format junit --output shots/19-storage.xml --test-output-dir maestro-out/19-storage .maestro/flows/19-storage.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] Sard 1.1 storage manager and download scheduler (28s)
+
+1/1 Flow Passed in 28s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{9dcb136 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{5121975 u0 app.sard.reader/.MainActivity t47}'
++ echo '  mCurrentFocus=Window{9dcb136 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{5121975 u0 app.sard.reader/.MainActivity t47}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/20-reader-plus-tab.yaml .yaml
++ name=20-reader-plus-tab
++ maestro test --format junit --output shots/20-reader-plus-tab.xml --test-output-dir maestro-out/20-reader-plus-tab .maestro/flows/20-reader-plus-tab.yaml
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] Sard 1.1 reader «سَرد+» tab (reader reached through reader mode, as in flow 02) (1m 14s)
+
+1/1 Flow Passed in 1m 14s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{edcf9dc u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{5562b76 u0 app.sard.reader/.MainActivity t48}'
++ echo '  mCurrentFocus=Window{edcf9dc u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{5562b76 u0 app.sard.reader/.MainActivity t48}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
++ for f in .maestro/flows/*.yaml
+++ basename .maestro/flows/21-sard-repo-plugins.yaml .yaml
++ name=21-sard-repo-plugins
++ maestro test --format junit --output shots/21-sard-repo-plugins.xml --test-output-dir maestro-out/21-sard-repo-plugins .maestro/flows/21-sard-repo-plugins.yaml
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+
+Waiting for flows to complete...
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ grep -q 'Application Not Responding'
++ adb shell dumpsys window
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
++ true
++ adb shell dumpsys window
++ grep -q 'Application Not Responding'
++ sleep 3
+[Passed] Sard repository (the only source ever added) -> plugin list with sard badges (1m 36s)
+
+1/1 Flow Passed in 1m 36s
+
+++ adb shell dumpsys window
+++ grep -E 'mCurrentFocus|mFocusedApp'
+++ tr -d '\r'
++ focus='  mCurrentFocus=Window{ce98b07 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{eeea74b u0 app.sard.reader/.MainActivity t50}'
++ echo '  mCurrentFocus=Window{ce98b07 u0 app.sard.reader/app.sard.reader.MainActivity}
+  mFocusedApp=ActivityRecord{eeea74b u0 app.sard.reader/.MainActivity t50}'
++ grep -q app.sard.reader
+++ adb logcat -d -s AndroidRuntime:E ReactNativeJS:E
+++ grep -c -E 'FATAL EXCEPTION|Rendered (fewer|more) hooks'
++ fatals=0
++ '[' 0 -gt 0 ']'
++ prev_fatals=0
+++ wc -l
++ echo 'flow failures: 0'
+flow failures: 0
++ cat shots/flow-failures.txt
++ find . /home/runner/.maestro -name '*.png' -newer /tmp/start -not -path './shots/*' -exec cp '{}' shots/ ';'
++ kill 2882
++ adb logcat -d -s ReactNativeJS:V AndroidRuntime:E
++ ls -la shots
+total 20020
+drwxr-xr-x  2 runner runner  12288 Oct 13 16:29 .
+drwxr-xr-x 18 runner runner   4096 Oct 13 16:05 ..
+-rw-r--r--  1 runner runner 130233 Oct 13 16:05 00-launch.png
+-rw-r--r--  1 runner runner  81862 Oct 13 16:29 01-library.png
+-rw-r--r--  1 runner runner    417 Oct 13 16:06 01-tabs.xml
+-rw-r--r--  1 runner runner    572 Oct 13 16:09 02-reader-from-url.xml
+-rw-r--r--  1 runner runner  64212 Oct 13 16:29 02-updates.png
+-rw-r--r--  1 runner runner    382 Oct 13 16:09 03-highlights.xml
+-rw-r--r--  1 runner runner  62258 Oct 13 16:29 03-history.png
+-rw-r--r--  1 runner runner 100989 Oct 13 16:29 04-browse.png
+-rw-r--r--  1 runner runner    386 Oct 13 16:10 04-stats-goals.xml
+-rw-r--r--  1 runner runner    386 Oct 13 16:11 05-ai-settings.xml
+-rw-r--r--  1 runner runner 150903 Oct 13 16:29 05-more.png
+-rw-r--r--  1 runner runner 163885 Oct 13 16:29 05b-more-sard-items.png
+-rw-r--r--  1 runner runner    366 Oct 13 16:11 06-agents.xml
+-rw-r--r--  1 runner runner 282858 Oct 13 16:29 06-reader-mode-article.png
+-rw-r--r--  1 runner runner  59683 Oct 13 16:29 07-novel.png
+-rw-r--r--  1 runner runner    393 Oct 13 16:12 07-smart-shelves.xml
+-rw-r--r--  1 runner runner  59683 Oct 13 16:29 08-export-dialog.png
+-rw-r--r--  1 runner runner    402 Oct 13 16:12 08-recommendations.xml
+-rw-r--r--  1 runner runner  82017 Oct 13 16:29 08b-novel-ai.png
+-rw-r--r--  1 runner runner    521 Oct 13 16:14 09-reader-mode.xml
+-rw-r--r--  1 runner runner 250201 Oct 13 16:29 09-reader.png
+-rw-r--r--  1 runner runner 298493 Oct 13 16:29 10-reader-sheet.png
+-rw-r--r--  1 runner runner    390 Oct 13 16:14 10-repositories.xml
+-rw-r--r--  1 runner runner 330821 Oct 13 16:29 11-reader-arabic.png
+-rw-r--r--  1 runner runner    418 Oct 13 16:15 11-settings-appearance.xml
+-rw-r--r--  1 runner runner    532 Oct 13 16:16 12-membership.xml
+-rw-r--r--  1 runner runner 375197 Oct 13 16:29 12-reader-focus-mode.png
+-rw-r--r--  1 runner runner    576 Oct 13 16:17 13-paywall-features.xml
+-rw-r--r--  1 runner runner 375197 Oct 13 16:29 13-reader-tts.png
+-rw-r--r--  1 runner runner    525 Oct 13 16:19 14-plus-hub-categories.xml
+-rw-r--r--  1 runner runner 282992 Oct 13 16:29 14-reader-ai-sheet.png
+-rw-r--r--  1 runner runner  89243 Oct 13 16:29 15-highlights-b.png
+-rw-r--r--  1 runner runner  89243 Oct 13 16:29 15-highlights.png
+-rw-r--r--  1 runner runner    487 Oct 13 16:23 15-plus-screens.xml
+-rw-r--r--  1 runner runner    491 Oct 13 16:24 16-achievements-wrap.xml
+-rw-r--r--  1 runner runner  91661 Oct 13 16:29 16-stats.png
+-rw-r--r--  1 runner runner    504 Oct 13 16:24 17-look-feel.xml
+-rw-r--r--  1 runner runner 148907 Oct 13 16:29 17-stats-goals.png
+-rw-r--r--  1 runner runner 194719 Oct 13 16:29 18-ai-settings-b.png
+-rw-r--r--  1 runner runner 190148 Oct 13 16:29 18-ai-settings.png
+-rw-r--r--  1 runner runner    583 Oct 13 16:26 18-privacy.xml
+-rw-r--r--  1 runner runner 209729 Oct 13 16:29 19-agents-hub.png
+-rw-r--r--  1 runner runner    481 Oct 13 16:26 19-storage.xml
+-rw-r--r--  1 runner runner  53776 Oct 13 16:29 20-agent-chat.png
+-rw-r--r--  1 runner runner    603 Oct 13 16:28 20-reader-plus-tab.xml
+-rw-r--r--  1 runner runner  53776 Oct 13 16:29 20b-agent-chat-command.png
+-rw-r--r--  1 runner runner    577 Oct 13 16:29 21-sard-repo-plugins.xml
+-rw-r--r--  1 runner runner  77460 Oct 13 16:29 21-smart-shelves-b.png
+-rw-r--r--  1 runner runner  77460 Oct 13 16:29 21-smart-shelves.png
+-rw-r--r--  1 runner runner  49631 Oct 13 16:29 22-recommendations-b.png
+-rw-r--r--  1 runner runner  49631 Oct 13 16:29 22-recommendations.png
+-rw-r--r--  1 runner runner 282385 Oct 13 16:29 23-reader-mode-deeplink.png
+-rw-r--r--  1 runner runner  95385 Oct 13 16:29 23b-reader-mode-empty.png
+-rw-r--r--  1 runner runner 281684 Oct 13 16:29 23c-reader-mode-article.png
+-rw-r--r--  1 runner runner  87095 Oct 13 16:29 24-settings.png
+-rw-r--r--  1 runner runner  91488 Oct 13 16:29 25-repositories.png
+-rw-r--r--  1 runner runner 169727 Oct 13 16:29 26-repository-add-dialog.png
+-rw-r--r--  1 runner runner 139355 Oct 13 16:29 27-settings-appearance.png
+-rw-r--r--  1 runner runner 150785 Oct 13 16:29 27b-settings-appearance.png
+-rw-r--r--  1 runner runner   9930 Oct 13 16:29 emulator-run.log
+-rw-r--r--  1 runner runner   4020 Oct 13 16:04 emulator.log
+-rw-r--r--  1 runner runner      0 Oct 13 16:05 flow-failures.txt
+-rw-r--r--  1 runner runner   1838 Oct 13 16:29 logcat.txt
+-rw-r--r--  1 runner runner  63018 Oct 13 16:29 run.log
+-rw-r--r--  1 runner runner  81415 Oct 13 16:29 step-007-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner  81893 Oct 13 16:29 step-010-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner 181816 Oct 13 16:29 step-026-assertCondition-المستودع_صالح.png
+-rw-r--r--  1 runner runner 271452 Oct 13 16:29 step-028-assertCondition-إعدادات_القارئ.png
+-rw-r--r--  1 runner runner 250201 Oct 13 16:29 step-035-assertCondition-إعدادات_القارئ.png
+-rw-r--r--  1 runner runner  81489 Oct 13 16:29 step-038-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner  80850 Oct 13 16:29 step-040-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner  81860 Oct 13 16:29 step-049-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner  81971 Oct 13 16:29 step-055-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner  81563 Oct 13 16:29 step-056-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner  81240 Oct 13 16:29 step-057-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner  81179 Oct 13 16:29 step-058-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner 375197 Oct 13 16:29 step-063-scrollUntilVisible-وضع_التركيز.png
+-rw-r--r--  1 runner runner  53776 Oct 13 16:29 step-063-tapOnElement-رتّب_مكتبتي.png
+-rw-r--r--  1 runner runner  87369 Oct 13 16:29 step-066-assertCondition-ويكي_مصدر.png
+-rw-r--r--  1 runner runner 375197 Oct 13 16:29 step-071-tapOnElement-TTS.png
+-rw-r--r--  1 runner runner  81860 Oct 13 16:29 step-088-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner 282992 Oct 13 16:29 step-090-tapOnElement-الذكاء_الاصطناعي.png
+-rw-r--r--  1 runner runner  82083 Oct 13 16:29 step-103-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner  59683 Oct 13 16:29 step-112-tapOnElement-صفحات_محفوظة_من_الويب.png
+-rw-r--r--  1 runner runner  59683 Oct 13 16:29 step-121-tapOnElement-تصدير.png
+-rw-r--r--  1 runner runner  81333 Oct 13 16:29 step-127-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner  82017 Oct 13 16:29 step-138-tapOnElement-الذكاء_الاصطناعي.png
+-rw-r--r--  1 runner runner  81333 Oct 13 16:29 step-166-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner  81333 Oct 13 16:29 step-205-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner  81234 Oct 13 16:29 step-244-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner  81282 Oct 13 16:29 step-283-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner  81282 Oct 13 16:29 step-322-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner  81893 Oct 13 16:29 step-361-tapOnElement-(إكمالComplete).png
+-rw-r--r--  1 runner runner 160016 Oct 13 16:29 v11-01-more-membership-rows.png
+-rw-r--r--  1 runner runner 191822 Oct 13 16:29 v11-02-membership-hub.png
+-rw-r--r--  1 runner runner 191442 Oct 13 16:29 v11-03-membership-tiers.png
+-rw-r--r--  1 runner runner 195548 Oct 13 16:29 v11-04-membership-benefits.png
+-rw-r--r--  1 runner runner 165463 Oct 13 16:29 v11-05-activate-code-dialog.png
+-rw-r--r--  1 runner runner 178190 Oct 13 16:29 v11-06-activate-code-typed.png
+-rw-r--r--  1 runner runner 139849 Oct 13 16:29 v11-07-wrap.png
+-rw-r--r--  1 runner runner 144391 Oct 13 16:29 v11-08-paywall.png
+-rw-r--r--  1 runner runner 197040 Oct 13 16:29 v11-09-features-directory.png
+-rw-r--r--  1 runner runner 211822 Oct 13 16:29 v11-10-features-directory-b.png
+-rw-r--r--  1 runner runner 147135 Oct 13 16:29 v11-11-plus-hub.png
+-rw-r--r--  1 runner runner 137997 Oct 13 16:29 v11-12-plus-hub-categories.png
+-rw-r--r--  1 runner runner 203561 Oct 13 16:29 v11-13-reading-tools.png
+-rw-r--r--  1 runner runner 192557 Oct 13 16:29 v11-13b-reading-tools.png
+-rw-r--r--  1 runner runner 150037 Oct 13 16:29 v11-14-library-tools.png
+-rw-r--r--  1 runner runner 201385 Oct 13 16:29 v11-15-storage.png
+-rw-r--r--  1 runner runner 158649 Oct 13 16:29 v11-16-achievements.png
+-rw-r--r--  1 runner runner 201246 Oct 13 16:29 v11-17-look-feel.png
+-rw-r--r--  1 runner runner 111289 Oct 13 16:29 v11-18-local-ai.png
+-rw-r--r--  1 runner runner 182231 Oct 13 16:29 v11-19-privacy.png
+-rw-r--r--  1 runner runner 210280 Oct 13 16:29 v11-20-backup-tools.png
+-rw-r--r--  1 runner runner 192694 Oct 13 16:29 v11-21-reading-tools-b.png
+-rw-r--r--  1 runner runner 203136 Oct 13 16:29 v11-21-reading-tools.png
+-rw-r--r--  1 runner runner  51275 Oct 13 16:29 v11-22-bookmarks-b.png
+-rw-r--r--  1 runner runner  51275 Oct 13 16:29 v11-22-bookmarks.png
+-rw-r--r--  1 runner runner  75334 Oct 13 16:29 v11-23-vocabulary-b.png
+-rw-r--r--  1 runner runner  75334 Oct 13 16:29 v11-23-vocabulary.png
+-rw-r--r--  1 runner runner 149586 Oct 13 16:29 v11-24-library-tools-b.png
+-rw-r--r--  1 runner runner 149586 Oct 13 16:29 v11-24-library-tools.png
+-rw-r--r--  1 runner runner 187998 Oct 13 16:29 v11-25-storage-b.png
+-rw-r--r--  1 runner runner 200456 Oct 13 16:29 v11-25-storage.png
+-rw-r--r--  1 runner runner 235652 Oct 13 16:29 v11-26-look-feel-b.png
+-rw-r--r--  1 runner runner 200405 Oct 13 16:29 v11-26-look-feel.png
+-rw-r--r--  1 runner runner 110957 Oct 13 16:29 v11-27-local-ai-b.png
+-rw-r--r--  1 runner runner 110957 Oct 13 16:29 v11-27-local-ai.png
+-rw-r--r--  1 runner runner 205395 Oct 13 16:29 v11-28-backup-tools-b.png
+-rw-r--r--  1 runner runner 208759 Oct 13 16:29 v11-28-backup-tools.png
+-rw-r--r--  1 runner runner 149015 Oct 13 16:29 v11-29-diagnostics-b.png
+-rw-r--r--  1 runner runner 148383 Oct 13 16:29 v11-29-diagnostics.png
+-rw-r--r--  1 runner runner 237457 Oct 13 16:29 v11-30-changelog-b.png
+-rw-r--r--  1 runner runner 211294 Oct 13 16:29 v11-30-changelog.png
+-rw-r--r--  1 runner runner 158598 Oct 13 16:29 v11-31-achievements.png
+-rw-r--r--  1 runner runner 158598 Oct 13 16:29 v11-32-daily-challenge.png
+-rw-r--r--  1 runner runner 157468 Oct 13 16:29 v11-33-badges.png
+-rw-r--r--  1 runner runner 138396 Oct 13 16:29 v11-34-wrap-month.png
+-rw-r--r--  1 runner runner 130427 Oct 13 16:29 v11-35-wrap-month-b.png
+-rw-r--r--  1 runner runner 200364 Oct 13 16:29 v11-36-look-feel.png
+-rw-r--r--  1 runner runner 235633 Oct 13 16:29 v11-37-look-feel-b.png
+-rw-r--r--  1 runner runner 236033 Oct 13 16:29 v11-38-look-feel-c.png
+-rw-r--r--  1 runner runner 182560 Oct 13 16:29 v11-39-privacy.png
+-rw-r--r--  1 runner runner  60977 Oct 13 16:29 v11-40-pin-setup.png
+-rw-r--r--  1 runner runner  60402 Oct 13 16:29 v11-41-pin-confirm.png
+-rw-r--r--  1 runner runner  60171 Oct 13 16:29 v11-42-privacy-pin-set.png
+-rw-r--r--  1 runner runner  57917 Oct 13 16:29 v11-43-privacy-pin-removed.png
+-rw-r--r--  1 runner runner 182663 Oct 13 16:29 v11-44-privacy-b.png
+-rw-r--r--  1 runner runner 201024 Oct 13 16:29 v11-45-storage.png
+-rw-r--r--  1 runner runner 188636 Oct 13 16:29 v11-46-storage-b.png
+-rw-r--r--  1 runner runner 189675 Oct 13 16:29 v11-47-storage-c.png
+-rw-r--r--  1 runner runner 279023 Oct 13 16:29 v11-48-reader-plus-tab.png
+-rw-r--r--  1 runner runner 358256 Oct 13 16:29 v11-49-reader-plus-tab-b.png
+-rw-r--r--  1 runner runner 181816 Oct 13 16:29 v11-50-add-sard-repo.png
+-rw-r--r--  1 runner runner 181682 Oct 13 16:29 v11-51-add-sard-repo-trusted.png
+-rw-r--r--  1 runner runner  72752 Oct 13 16:29 v11-52-repositories-with-sard.png
+-rw-r--r--  1 runner runner  87369 Oct 13 16:29 v11-53-plugins-sard-badges.png
+-rw-r--r--  1 runner runner  87369 Oct 13 16:29 v11-54-plugins-sard-badges-b.png
++ '[' '!' -s shots/flow-failures.txt ']'

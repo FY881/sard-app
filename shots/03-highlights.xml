@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="sard" tests="1" failures="0" time="23.081" timestamp="2026-10-13T16:09:36">
+    <testcase id="03-highlights" name="03-highlights" classname="03-highlights" file=".maestro/flows/03-highlights.yaml" time="23.063" timestamp="2026-10-13T16:09:36" status="SUCCESS"/>
+  </testsuite>
+</testsuites>

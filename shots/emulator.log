@@ -1,0 +1,89 @@
++ SDK=/usr/local/lib/android/sdk
++ export PATH=/usr/local/lib/android/sdk/cmdline-tools/latest/bin:/usr/local/lib/android/sdk/emulator:/usr/local/lib/android/sdk/platform-tools:/home/runner/.maestro/bin:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++ PATH=/usr/local/lib/android/sdk/cmdline-tools/latest/bin:/usr/local/lib/android/sdk/emulator:/usr/local/lib/android/sdk/platform-tools:/home/runner/.maestro/bin:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++ ls -la /dev/kvm
+crw-rw-rw- 1 root kvm 10, 232 Oct 13 16:02 /dev/kvm
++ nproc
+4
++ free -m
+               total        used        free      shared  buff/cache   available
+Mem:           15989        1071       11381          46        3929       14918
+Swap:           3071           0        3071
++ df -h /
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   60G   85G  42% /
++ sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/.ghcup /opt/hostedtoolcache/CodeQL /usr/local/share/boost
++ df -h /
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   49G   96G  34% /
++ export ANDROID_AVD_HOME=/home/runner/.android/avd
++ ANDROID_AVD_HOME=/home/runner/.android/avd
++ mkdir -p /home/runner/.android/avd
++ IMG='system-images;android-31;google_apis;x86_64'
++ yes
++ sdkmanager --licenses
+yes: standard output: Broken pipe
++ sdkmanager --install platform-tools emulator 'system-images;android-31;google_apis;x86_64'
++ echo sdk-install 0
+sdk-install 0
++ echo no
++ avdmanager create avd -n sard -k 'system-images;android-31;google_apis;x86_64' -d pixel_6 -p /home/runner/.android/avd/sard.avd --force
+Loading local repository...                                                     [=========                              ] 25% Loading local repository...       [=========                              ] 25% Fetch remote repository...        [=======================================] 100% Fetch remote repository...       
+Auto-selecting single ABI x86_64
++ ls -la /home/runner/.android/avd /home/runner/.android/avd/sard.avd
+/home/runner/.android/avd:
+total 16
+drwxr-xr-x 3 runner runner 4096 Oct 13 16:03 .
+drwxr-xr-x 3 runner runner 4096 Oct 13 16:02 ..
+drwxr-xr-x 2 runner runner 4096 Oct 13 16:03 sard.avd
+-rw-r--r-- 1 runner runner   81 Oct 13 16:03 sard.ini
+
+/home/runner/.android/avd/sard.avd:
+total 1036
+drwxr-xr-x 2 runner runner    4096 Oct 13 16:03 .
+drwxr-xr-x 3 runner runner    4096 Oct 13 16:03 ..
+-rw-r--r-- 1 runner runner    3504 Oct 13 16:03 config.ini
+-rw-r--r-- 1 runner runner 1048576 Oct 13 16:03 userdata.img
++ CFG=/home/runner/.android/avd/sard.avd/config.ini
++ echo hw.ramSize=3072
++ echo hw.cpu.ncore=2
++ echo disk.dataPartition.size=2G
++ echo hw.keyboard=yes
++ timeout 600 adb wait-for-device
++ nohup emulator -avd sard -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -no-metrics -accel on
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+++ seq 1 180
++ for i in $(seq 1 180)
+++ adb shell getprop sys.boot_completed
+++ tr -d '\r'
++ '[' '' = 1 ']'
++ sleep 5
++ for i in $(seq 1 180)
+++ adb shell getprop sys.boot_completed
+++ tr -d '\r'
++ '[' '' = 1 ']'
++ sleep 5
++ for i in $(seq 1 180)
+++ adb shell getprop sys.boot_completed
+++ tr -d '\r'
++ '[' '' = 1 ']'
++ sleep 5
++ for i in $(seq 1 180)
+++ adb shell getprop sys.boot_completed
+++ tr -d '\r'
++ '[' 1 = 1 ']'
++ break
++ adb shell getprop sys.boot_completed
+1
++ adb shell settings put global window_animation_scale 0
++ adb shell settings put global transition_animation_scale 0
++ adb shell settings put global animator_duration_scale 0
++ bash .maestro/run-screens.sh
++ rc=0
++ echo 'screens exit 0'
+screens exit 0
++ adb emu kill
+OK: killing emulator, bye bye
+OK
++ exit 0

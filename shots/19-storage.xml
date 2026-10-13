@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="sard" tests="1" failures="0" time="27.683" timestamp="2026-10-13T16:26:23">
+    <testcase id="Sard 1.1 storage manager and download scheduler" name="Sard 1.1 storage manager and download scheduler" classname="Sard 1.1 storage manager and download scheduler" file=".maestro/flows/19-storage.yaml" time="27.666" timestamp="2026-10-13T16:26:23" status="SUCCESS"/>
+  </testsuite>
+</testsuites>

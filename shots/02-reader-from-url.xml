@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="sard" tests="1" failures="0" time="174.402" timestamp="2026-10-13T16:06:36">
+    <testcase id="Reader mode URL -> save as chapter -> reader sheet tabs -> novel export/AI" name="Reader mode URL -> save as chapter -> reader sheet tabs -> novel export/AI" classname="Reader mode URL -> save as chapter -> reader sheet tabs -> novel export/AI" file=".maestro/flows/02-reader-from-url.yaml" time="174.366" timestamp="2026-10-13T16:06:36" status="SUCCESS"/>
+  </testsuite>
+</testsuites>

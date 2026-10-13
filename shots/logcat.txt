@@ -1,0 +1,21 @@
+--------- beginning of main
+10-13 16:28:17.829 20009 20037 W ReactNativeJS: Linking found multiple possible URI schemes in your Expo config.
+10-13 16:28:17.829 20009 20037 W ReactNativeJS: Using 'sard'. Ignoring: lnreader, app.sard.reader.
+10-13 16:28:17.829 20009 20037 W ReactNativeJS: Provide the preferred URI scheme to the Linking API.
+10-13 16:28:17.829 20009 20037 W ReactNativeJS: Linking found multiple possible URI schemes in your Expo config.
+10-13 16:28:17.829 20009 20037 W ReactNativeJS: Using 'sard'. Ignoring: lnreader, app.sard.reader.
+10-13 16:28:17.829 20009 20037 W ReactNativeJS: Provide the preferred URI scheme to the Linking API.
+10-13 16:28:18.343 20009 20037 I ReactNativeJS: Running "main"
+10-13 16:28:18.352 20009 20037 I ReactNativeJS: Setting database Pragmas
+10-13 16:28:18.354 20009 20037 I ReactNativeJS: Creating database triggers
+10-13 16:28:18.354 20009 20037 I ReactNativeJS: Populating database
+10-13 16:29:09.913 20275 20300 W ReactNativeJS: Linking found multiple possible URI schemes in your Expo config.
+10-13 16:29:09.913 20275 20300 W ReactNativeJS: Using 'sard'. Ignoring: lnreader, app.sard.reader.
+10-13 16:29:09.913 20275 20300 W ReactNativeJS: Provide the preferred URI scheme to the Linking API.
+10-13 16:29:09.914 20275 20300 W ReactNativeJS: Linking found multiple possible URI schemes in your Expo config.
+10-13 16:29:09.914 20275 20300 W ReactNativeJS: Using 'sard'. Ignoring: lnreader, app.sard.reader.
+10-13 16:29:09.914 20275 20300 W ReactNativeJS: Provide the preferred URI scheme to the Linking API.
+10-13 16:29:10.409 20275 20300 I ReactNativeJS: Running "main"
+10-13 16:29:10.417 20275 20300 I ReactNativeJS: Setting database Pragmas
+10-13 16:29:10.419 20275 20300 I ReactNativeJS: Creating database triggers
+10-13 16:29:10.420 20275 20300 I ReactNativeJS: Populating database

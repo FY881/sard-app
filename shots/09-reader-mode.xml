@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="sard" tests="1" failures="0" time="74.276" timestamp="2026-10-13T16:12:56">
+    <testcase id="Reader mode for a URL (البخلاء on Arabic Wikisource)" name="Reader mode for a URL (البخلاء on Arabic Wikisource)" classname="Reader mode for a URL (البخلاء on Arabic Wikisource)" file=".maestro/flows/09-reader-mode.yaml" time="74.248" timestamp="2026-10-13T16:12:56" status="SUCCESS"/>
+  </testsuite>
+</testsuites>

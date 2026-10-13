@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="sard" tests="1" failures="0" time="68.288" timestamp="2026-10-13T16:15:34">
+    <testcase id="Sard 1.1 membership hub, comparison table, activate-code dialog" name="Sard 1.1 membership hub, comparison table, activate-code dialog" classname="Sard 1.1 membership hub, comparison table, activate-code dialog" file=".maestro/flows/12-membership.yaml" time="68.254" timestamp="2026-10-13T16:15:34" status="SUCCESS"/>
+  </testsuite>
+</testsuites>

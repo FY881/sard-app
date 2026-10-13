@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="sard" tests="1" failures="0" time="220.171" timestamp="2026-10-13T16:19:49">
+    <testcase id="Sard 1.1 category screens in depth (deep links)" name="Sard 1.1 category screens in depth (deep links)" classname="Sard 1.1 category screens in depth (deep links)" file=".maestro/flows/15-plus-screens.yaml" time="220.11" timestamp="2026-10-13T16:19:49" status="SUCCESS"/>
+  </testsuite>
+</testsuites>
