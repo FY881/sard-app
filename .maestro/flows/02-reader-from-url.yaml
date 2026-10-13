@@ -1,0 +1,91 @@
+appId: app.sard.reader
+name: Reader mode URL -> save as chapter -> reader sheet tabs -> novel export/AI
+# Sard ships no built-in sources (web novels only, repo list empty), so the
+# reader is reached through reader mode: saving the page as a chapter of the
+# local novel «صفحات محفوظة من الويب» opens it in the normal reader.
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://readermode?url=https%3A%2F%2Far.wikisource.org%2Fwiki%2F%25D8%25A7%25D9%2584%25D8%25A8%25D8%25AE%25D9%2584%25D8%25A7%25D8%25A1"
+- extendedWaitUntil:
+    notVisible:
+      text: "جارٍ جلب الصفحة…"
+    timeout: 30000
+    optional: true
+- takeScreenshot: 06-reader-mode-article
+- tapOn:
+    text: "حفظ كفصل في المكتبة"
+    optional: true
+- extendedWaitUntil:
+    visible:
+      text: "إعدادات القارئ"
+    timeout: 20000
+    optional: true
+- takeScreenshot: 09-reader
+- runFlow:
+    when:
+      notVisible:
+        text: "إعدادات القارئ"
+    commands:
+      - tapOn:
+          point: "50%,50%"
+- tapOn:
+    text: "إعدادات القارئ"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 10-reader-sheet
+- tapOn:
+    text: "العربية"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 11-reader-arabic
+- scrollUntilVisible:
+    element:
+      text: "وضع التركيز"
+    direction: DOWN
+    timeout: 8000
+    optional: true
+- takeScreenshot: 12-reader-focus-mode
+- tapOn:
+    text: "TTS"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 13-reader-tts
+- back
+- waitForAnimationToEnd
+- runFlow:
+    when:
+      notVisible:
+        text: "الذكاء الاصطناعي"
+    commands:
+      - tapOn:
+          point: "50%,50%"
+- tapOn:
+    text: "الذكاء الاصطناعي"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 14-reader-ai-sheet
+# the saved local novel from the library: novel screen, export dialog, AI
+- runFlow: ../subflows/start.yaml
+- tapOn:
+    text: "(المكتبة|Library)"
+    optional: true
+- tapOn:
+    text: ".*صفحات محفوظة من الويب.*"
+    optional: true
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: 07-novel
+- tapOn:
+    text: "تصدير"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 08-export-dialog
+- back
+- waitForAnimationToEnd
+- tapOn:
+    text: "الذكاء الاصطناعي"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 08b-novel-ai

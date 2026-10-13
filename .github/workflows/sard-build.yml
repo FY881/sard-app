@@ -1,0 +1,123 @@
+name: Sard APK
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '.maestro/**'
+      - '.github/workflows/sard-screens.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  issues: write
+
+env:
+  CI: 'true'
+  EXPO_NO_TELEMETRY: '1'
+  NODE_ENV: 'production'
+
+jobs:
+  apk:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android/sdk/ndk/2[0-6]* /opt/ghc /usr/local/.ghcup /usr/share/swift /usr/local/share/boost /opt/hostedtoolcache/CodeQL || true
+          df -h /
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Decrypt signing key (needs secret SARD_KEYSTORE_PASS)
+        shell: bash
+        env:
+          SARD_KEYSTORE_PASS: ${{ secrets.SARD_KEYSTORE_PASS }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SARD_KEYSTORE_PASS:-}" ]; then
+            echo "::error title=Missing secret::SARD_KEYSTORE_PASS is not set. Add it under Settings > Secrets and variables > Actions." | tee -a "$GITHUB_WORKSPACE/build.log"
+            exit 1
+          fi
+          export SARD_KEYSTORE_PASS="$(printf '%s' "$SARD_KEYSTORE_PASS" | tr -d '\r\n')"
+          if ! openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -pass env:SARD_KEYSTORE_PASS \
+               -in plugins/android/sard-signing.tar.enc -out "$RUNNER_TEMP/sard-signing.tar"; then
+            echo "::error title=Decrypt failed::Could not decrypt plugins/android/sard-signing.tar.enc; SARD_KEYSTORE_PASS is wrong." | tee -a "$GITHUB_WORKSPACE/build.log"
+            exit 1
+          fi
+          tar -xf "$RUNNER_TEMP/sard-signing.tar" -C plugins/android
+          rm -f "$RUNNER_TEMP/sard-signing.tar"
+          test -s plugins/android/sard.keystore && test -s plugins/android/sard-keystore.properties
+          echo "signing key decrypted" | tee -a "$GITHUB_WORKSPACE/build.log"
+      - name: nitro-epub native tests (RTL + embedded fonts)
+        shell: bash
+        run: |
+          set -o pipefail
+          {
+          cd modules/nitro-epub/cpp
+          g++ -std=c++20 -O1 -I. -Iexport tests/EpubExporterTest.cpp export/*.cpp pugixml.cpp -lz -o /tmp/epubtest
+          /tmp/epubtest /tmp/epubfx
+          unzip -l /tmp/epubfx/ar.epub
+          unzip -p /tmp/epubfx/ar.epub EPUB/content.opf | tee /tmp/opf
+          grep -q 'page-progression-direction="rtl"' /tmp/opf
+          grep -q 'media-type="font/ttf"' /tmp/opf
+          unzip -p /tmp/epubfx/ar.epub EPUB/styles.css | tee /tmp/css
+          grep -q 'url("fonts/font-0.ttf")' /tmp/css
+          grep -q 'https://example.com/x.ttf' /tmp/css
+          unzip -p /tmp/epubfx/ar.epub EPUB/text/chapter-0.xhtml | grep -q 'dir="rtl"'
+          unzip -p /tmp/epubfx/ar.epub EPUB/fonts/font-0.ttf | grep -q FAKEFONT
+          ! unzip -p /tmp/epubfx/fixture.epub EPUB/content.opf | grep -q 'page-progression-direction'
+          echo "nitro-epub native tests passed"
+          } 2>&1 | tee -a "$GITHUB_WORKSPACE/build.log"
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+      - shell: bash
+        run: set -o pipefail; pnpm install --frozen-lockfile --prefer-offline 2>&1 | tee -a "$GITHUB_WORKSPACE/build.log"
+      - shell: bash
+        run: set -o pipefail; pnpm generate:env:release --build-type "Sard CI" --node-env "production" 2>&1 | tee -a "$GITHUB_WORKSPACE/build.log"
+      - shell: bash
+        run: set -o pipefail; pnpm exec expo prebuild --platform android --clean --no-install --non-interactive 2>&1 | tee -a "$GITHUB_WORKSPACE/build.log"
+      - uses: gradle/actions/setup-gradle@v6
+      - name: Build APK (arm64, release signed with the stable Sard key)
+        working-directory: android
+        shell: bash
+        run: |
+          set -o pipefail
+          # FY881/sard-reader (private) built up to r11; continue the versionCode sequence
+          # so this APK installs as an upgrade over earlier Sard builds.
+          SARD_CODE=$((GITHUB_RUN_NUMBER + 11))
+          mkdir -p app/build/intermediates/sourcemaps/react/release
+          ./gradlew :app:assembleRelease --build-cache -Dorg.gradle.jvmargs="-Xmx6g -XX:MaxMetaspaceSize=1g" -Pkotlin.daemon.jvmargs=-Xmx2g \
+            -PreactNativeArchitectures=arm64-v8a,x86_64 \
+            -PpreReleaseVersionCode="$SARD_CODE" \
+            -PpreReleaseVersionName="1.1.0-r$SARD_CODE" --stacktrace 2>&1 | tee -a "$GITHUB_WORKSPACE/build.log"
+          mv app/build/outputs/apk/release/app-release.apk "app/build/outputs/apk/release/Sard-1.1.0-r$SARD_CODE.apk"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Sard-APK
+          path: android/app/build/outputs/apk/release/*.apk
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0
+      - name: Report failure log as issue
+        if: failure()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          touch "$GITHUB_WORKSPACE/build.log"
+          { echo "Run ${{ github.run_id }}"; echo '```'; grep -n -E "FAILURE|error:|Error:|What went wrong|ERROR|Exception|e: |ERR_PNPM|failed" "$GITHUB_WORKSPACE/build.log" | head -150; echo '```'; echo '```'; tail -150 "$GITHUB_WORKSPACE/build.log"; echo '```'; } > body.md
+          gh issue create --repo "${{ github.repository }}" --title "CI build failed ${{ github.run_id }}" --body-file body.md

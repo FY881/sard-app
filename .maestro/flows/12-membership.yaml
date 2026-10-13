@@ -1,0 +1,41 @@
+appId: app.sard.reader
+name: Sard 1.1 membership hub, comparison table, activate-code dialog
+---
+- runFlow: ../subflows/start.yaml
+- tapOn:
+    text: "(المزيد|More)"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: v11-01-more-membership-rows
+- tapOn:
+    id: "more-membership"
+    optional: true
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-02-membership-hub
+- scrollUntilVisible:
+    element:
+      id: "sard-tier-table"
+    direction: DOWN
+    timeout: 8000
+    optional: true
+- takeScreenshot: v11-03-membership-tiers
+- scroll
+- takeScreenshot: v11-04-membership-benefits
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://membership"
+- waitForAnimationToEnd:
+    timeout: 8000
+- tapOn:
+    id: "sard-open-activate"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: v11-05-activate-code-dialog
+- tapOn:
+    id: "sard-code-input"
+    optional: true
+- inputText: "SARD-TEST-CODE"
+- takeScreenshot: v11-06-activate-code-typed
+- back

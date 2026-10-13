@@ -1,0 +1,27 @@
+appId: app.sard.reader
+---
+- runFlow: ../subflows/start.yaml
+- tapOn:
+    text: "(المزيد|More)"
+    optional: true
+- scrollUntilVisible:
+    element:
+      text: "الإعدادات"
+    direction: DOWN
+    timeout: 8000
+    optional: true
+- tapOn:
+    text: "الإعدادات"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 24-settings
+- tapOn:
+    text: "(Repositories|المستودعات)"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 25-repositories
+- tapOn:
+    text: "إضافة"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 26-repository-add-dialog

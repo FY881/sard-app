@@ -1,0 +1,7 @@
+# Opens a sard:// deep link (env LINK) after the app is up.
+appId: app.sard.reader
+---
+- runFlow: start.yaml
+- openLink: ${LINK}
+- waitForAnimationToEnd:
+    timeout: 8000

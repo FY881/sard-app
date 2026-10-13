@@ -1,0 +1,14 @@
+appId: app.sard.reader
+name: Sard 1.1 storage manager and download scheduler
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/storage"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-45-storage
+- scroll
+- takeScreenshot: v11-46-storage-b
+- scroll
+- takeScreenshot: v11-47-storage-c

@@ -1,0 +1,14 @@
+{
+  "name": "مستودع سَرد",
+  "name_en": "Sard Repository",
+  "description_ar": "مستودع إضافات مصادر لتطبيق سَرد يضم مكتبات مفتوحة الترخيص أو في الملك العام فقط: ويكي مصدر العربية، مشروع غوتنبرغ، ستاندرد إيبوكس، وكتالوج OPDS لخادمك الخاص.",
+  "description_en": "Source plugins for the Sard reader: open-license and public-domain libraries only.",
+  "version": "1.0.0",
+  "formatVersion": 1,
+  "generatedAt": "2026-10-13T10:20:12.733Z",
+  "pluginCount": 4,
+  "homepage": "https://github.com/FY881/sard-plugins",
+  "pluginsUrl": "https://raw.githubusercontent.com/FY881/sard-plugins/main/.dist/plugins.min.json",
+  "contentPolicy": "open-license-only",
+  "license": "MIT"
+}

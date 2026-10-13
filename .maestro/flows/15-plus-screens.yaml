@@ -1,0 +1,93 @@
+appId: app.sard.reader
+name: Sard 1.1 category screens in depth (deep links)
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/reading"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-21-reading-tools
+- scroll
+- takeScreenshot: v11-21-reading-tools-b
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/bookmarks"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-22-bookmarks
+- scroll
+- takeScreenshot: v11-22-bookmarks-b
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/vocab"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-23-vocabulary
+- scroll
+- takeScreenshot: v11-23-vocabulary-b
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/library"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-24-library-tools
+- scroll
+- takeScreenshot: v11-24-library-tools-b
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/storage"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-25-storage
+- scroll
+- takeScreenshot: v11-25-storage-b
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/look"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-26-look-feel
+- scroll
+- takeScreenshot: v11-26-look-feel-b
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/ai"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-27-local-ai
+- scroll
+- takeScreenshot: v11-27-local-ai-b
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/backup"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-28-backup-tools
+- scroll
+- takeScreenshot: v11-28-backup-tools-b
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/diagnostics"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-29-diagnostics
+- scroll
+- takeScreenshot: v11-29-diagnostics-b
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/changelog"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-30-changelog
+- scroll
+- takeScreenshot: v11-30-changelog-b

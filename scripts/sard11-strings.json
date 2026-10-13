@@ -1,0 +1,1690 @@
+{
+ "common.add": {
+  "ar": "إضافة",
+  "en": "Add"
+ },
+ "common.all": {
+  "ar": "الكل",
+  "en": "All"
+ },
+ "common.cancel": {
+  "ar": "إلغاء",
+  "en": "Cancel"
+ },
+ "common.chapter": {
+  "ar": "الفصل",
+  "en": "Chapter"
+ },
+ "common.close": {
+  "ar": "إغلاق",
+  "en": "Close"
+ },
+ "common.confirm": {
+  "ar": "تأكيد",
+  "en": "Confirm"
+ },
+ "common.copied": {
+  "ar": "تم النسخ",
+  "en": "Copied"
+ },
+ "common.copy": {
+  "ar": "نسخ",
+  "en": "Copy"
+ },
+ "common.days": {
+  "ar": "%{n} يوم",
+  "en": "%{n} days"
+ },
+ "common.delete": {
+  "ar": "حذف",
+  "en": "Delete"
+ },
+ "common.done": {
+  "ar": "تم",
+  "en": "Done"
+ },
+ "common.edit": {
+  "ar": "تعديل",
+  "en": "Edit"
+ },
+ "common.error": {
+  "ar": "حدث خطأ: %{error}",
+  "en": "Something went wrong: %{error}"
+ },
+ "common.loading": {
+  "ar": "جارٍ التحميل…",
+  "en": "Loading…"
+ },
+ "common.minutes": {
+  "ar": "%{n} دقيقة",
+  "en": "%{n} min"
+ },
+ "common.noNovels": {
+  "ar": "لا توجد روايات في مكتبتك بعد",
+  "en": "No novels in your library yet"
+ },
+ "common.none": {
+  "ar": "لا شيء بعد",
+  "en": "Nothing yet"
+ },
+ "common.novel": {
+  "ar": "الرواية",
+  "en": "Novel"
+ },
+ "common.open": {
+  "ar": "فتح",
+  "en": "Open"
+ },
+ "common.pickChapter": {
+  "ar": "اختر فصلًا",
+  "en": "Pick a chapter"
+ },
+ "common.pickNovel": {
+  "ar": "اختر رواية",
+  "en": "Pick a novel"
+ },
+ "common.save": {
+  "ar": "حفظ",
+  "en": "Save"
+ },
+ "common.search": {
+  "ar": "بحث",
+  "en": "Search"
+ },
+ "common.share": {
+  "ar": "مشاركة",
+  "en": "Share"
+ },
+ "common.unlimited": {
+  "ar": "بلا حد",
+  "en": "Unlimited"
+ },
+ "features.search": {
+  "ar": "ابحث في المميزات",
+  "en": "Search features"
+ },
+ "features.title": {
+  "ar": "دليل المميزات",
+  "en": "Feature directory"
+ },
+ "gate.disabled": {
+  "ar": "أوقف المالك هذه الميزة مؤقتًا",
+  "en": "Temporarily turned off by the owner"
+ },
+ "gate.unlockWith": {
+  "ar": "افتحها مع %{tier}",
+  "en": "Unlock with %{tier}"
+ },
+ "membership.activate": {
+  "ar": "تفعيل",
+  "en": "Activate"
+ },
+ "membership.activateCode": {
+  "ar": "تفعيل كود",
+  "en": "Activate code"
+ },
+ "membership.activateHelp": {
+  "ar": "الصق الكود الذي وصلك من مالك سَرد أو امسح رمز QR. يعمل التفعيل بلا إنترنت.",
+  "en": "Paste the code you received from Sard's owner or scan its QR. Works offline."
+ },
+ "membership.activateTitle": {
+  "ar": "تفعيل كود العضوية",
+  "en": "Activate a membership code"
+ },
+ "membership.activated": {
+  "ar": "تم تفعيل %{tier} 🎉",
+  "en": "%{tier} activated 🎉"
+ },
+ "membership.allFeatures": {
+  "ar": "دليل كل المميزات",
+  "en": "All features"
+ },
+ "membership.allowCamera": {
+  "ar": "السماح بالكاميرا",
+  "en": "Allow camera"
+ },
+ "membership.benefits": {
+  "ar": "ماذا تحصل في %{tier}",
+  "en": "What you get in %{tier}"
+ },
+ "membership.cameraNeeded": {
+  "ar": "نحتاج إذن الكاميرا لمسح الرمز",
+  "en": "Camera permission is needed to scan"
+ },
+ "membership.codes": {
+  "ar": "الأكواد المفعّلة على هذا الجهاز",
+  "en": "Codes on this device"
+ },
+ "membership.compare": {
+  "ar": "قارن الباقات",
+  "en": "Compare plans"
+ },
+ "membership.current": {
+  "ar": "خطتك الحالية",
+  "en": "Your plan"
+ },
+ "membership.devOverride": {
+  "ar": "فتح المالك (نسخة التطوير فقط)",
+  "en": "Owner unlock (dev build only)"
+ },
+ "membership.deviceId": {
+  "ar": "معرّف الجهاز",
+  "en": "Device ID"
+ },
+ "membership.deviceIdHelp": {
+  "ar": "أرسله للمالك لربط الكود بهاتفك",
+  "en": "Send it to the owner to bind a code to this phone"
+ },
+ "membership.err.already": {
+  "ar": "هذا الكود مفعّل بالفعل على جهازك",
+  "en": "This code is already active on your device"
+ },
+ "membership.err.device": {
+  "ar": "هذا الكود مربوط بجهاز آخر",
+  "en": "This code is bound to another device"
+ },
+ "membership.err.expired": {
+  "ar": "انتهت صلاحية هذا الكود",
+  "en": "This code has expired"
+ },
+ "membership.err.format": {
+  "ar": "تعذّر قراءة الكود، تأكد من نسخه كاملًا",
+  "en": "Couldn't read the code; copy it completely"
+ },
+ "membership.err.future": {
+  "ar": "تاريخ الكود في المستقبل — تحقق من ساعة الهاتف",
+  "en": "Code date is in the future — check the phone clock"
+ },
+ "membership.err.revoked": {
+  "ar": "ألغى المالك هذا الكود",
+  "en": "The owner revoked this code"
+ },
+ "membership.err.signature": {
+  "ar": "الكود غير صحيح أو لم يصدره مالك سَرد",
+  "en": "Invalid code or not issued by Sard's owner"
+ },
+ "membership.expires": {
+  "ar": "تنتهي في %{date} (بعد %{days} يوم)",
+  "en": "Expires %{date} (%{days} days left)"
+ },
+ "membership.howToGet": {
+  "ar": "كيف أحصل على كود؟",
+  "en": "How do I get a code?"
+ },
+ "membership.howToGetBody": {
+  "ar": "سَرد مشروع شخصي بلا متجر ولا دفع داخل التطبيق. الأكواد يصدرها المالك يدويًا ويمكن ربطها بمعرّف جهازك.",
+  "en": "Sard is a personal project with no store or in-app payment. The owner issues codes by hand and can bind them to your device ID."
+ },
+ "membership.lifetime": {
+  "ar": "مدى الحياة",
+  "en": "Lifetime"
+ },
+ "membership.more": {
+  "ar": "عضويتك وكل مميزات 1.1",
+  "en": "Your plan and every 1.1 feature"
+ },
+ "membership.paste": {
+  "ar": "لصق",
+  "en": "Paste"
+ },
+ "membership.qrHint": {
+  "ar": "وجّه الكاميرا إلى رمز QR الخاص بالكود",
+  "en": "Point the camera at the code's QR"
+ },
+ "membership.qrNotCode": {
+  "ar": "هذا الرمز ليس كود عضوية سَرد",
+  "en": "This QR is not a Sard membership code"
+ },
+ "membership.removeCode": {
+  "ar": "إزالة",
+  "en": "Remove"
+ },
+ "membership.restore": {
+  "ar": "استعادة العضوية",
+  "en": "Restore membership"
+ },
+ "membership.restoreHelp": {
+  "ar": "الصق كودًا أو أكثر (كل كود في سطر) لاستعادتها بعد إعادة التثبيت",
+  "en": "Paste one or more codes (one per line) to restore after reinstalling"
+ },
+ "membership.restored": {
+  "ar": "استُعيد %{n} وفشل %{failed}",
+  "en": "Restored %{n}, failed %{failed}"
+ },
+ "membership.scan": {
+  "ar": "مسح QR",
+  "en": "Scan QR"
+ },
+ "membership.source.admin": {
+  "ar": "منحة من الإدارة",
+  "en": "Admin grant"
+ },
+ "membership.source.code": {
+  "ar": "كود من المالك",
+  "en": "Owner code"
+ },
+ "membership.source.trial": {
+  "ar": "تجربة مجانية",
+  "en": "Free trial"
+ },
+ "membership.statusFree": {
+  "ar": "مجاني — كل أساسيات القراءة متاحة لك",
+  "en": "Free — every reading essential is yours"
+ },
+ "membership.statusGrace": {
+  "ar": "انتهت — مهلة %{days} يوم قبل الرجوع للمجاني",
+  "en": "Expired — %{days}-day grace before Free"
+ },
+ "membership.title": {
+  "ar": "العضوية",
+  "en": "Membership"
+ },
+ "membership.trial": {
+  "ar": "جرّب بلس مجانًا %{days} أيام",
+  "en": "Try Plus free for %{days} days"
+ },
+ "membership.trialHelp": {
+  "ar": "مرة واحدة لكل جهاز، بلا بطاقة ولا حساب",
+  "en": "Once per device, no card, no account"
+ },
+ "membership.trialStarted": {
+  "ar": "بدأت تجربة بلس لمدة ٧ أيام",
+  "en": "Your 7-day Plus trial started"
+ },
+ "membership.trialUsed": {
+  "ar": "استُخدمت التجربة على هذا الجهاز من قبل",
+  "en": "The trial was already used on this device"
+ },
+ "paywall.alsoIn": {
+  "ar": "ومعها في %{tier}",
+  "en": "Also in %{tier}"
+ },
+ "paywall.compare": {
+  "ar": "قارن الباقات",
+  "en": "Compare plans"
+ },
+ "paywall.disabled": {
+  "ar": "هذه الميزة متوقفة مؤقتًا من المالك.",
+  "en": "This feature is temporarily turned off by the owner."
+ },
+ "paywall.haveCode": {
+  "ar": "عندي كود تفعيل",
+  "en": "I have a code"
+ },
+ "paywall.limit": {
+  "ar": "وصلت إلى حد %{limit} في %{tier}. المستوى الأعلى يرفع الحد.",
+  "en": "You reached the %{limit} limit on %{tier}. A higher tier raises it."
+ },
+ "paywall.needs": {
+  "ar": "متاحة في %{tier} فما فوق",
+  "en": "Available from %{tier} and up"
+ },
+ "paywall.trial": {
+  "ar": "ابدأ تجربة بلس %{days} أيام",
+  "en": "Start a %{days}-day Plus trial"
+ },
+ "plus.agents.commands": {
+  "ar": "أوامر الوكيل",
+  "en": "Agent commands"
+ },
+ "plus.agents.commandsHelp": {
+  "ar": "أمر في كل سطر، مثل: «حدّث المكتبة» أو «نزّل الفصول الجديدة». حتى ١٠ أوامر.",
+  "en": "One command per line, e.g. «update library». Up to 10."
+ },
+ "plus.agents.defaultName": {
+  "ar": "وكيلي",
+  "en": "My agent"
+ },
+ "plus.agents.name": {
+  "ar": "اسم الوكيل",
+  "en": "Agent name"
+ },
+ "plus.agents.new": {
+  "ar": "وكيل جديد",
+  "en": "New agent"
+ },
+ "plus.agents.picks": {
+  "ar": "تحديث الترشيحات",
+  "en": "Refresh recommendations"
+ },
+ "plus.agents.ran": {
+  "ar": "نُفّذ %{n} أمر. النتائج في محادثة الوكيل",
+  "en": "Ran %{n} commands. Results are in the agent chat"
+ },
+ "plus.agents.run": {
+  "ar": "شغّل",
+  "en": "Run"
+ },
+ "plus.agents.scheduleHelp": {
+  "ar": "يعمل عند فتح التطبيق إذا حان الموعد.",
+  "en": "Runs when you open the app and a run is due."
+ },
+ "plus.agents.scheduleOn": {
+  "ar": "تشغيل الوكلاء تلقائيًا",
+  "en": "Run agents automatically"
+ },
+ "plus.agents.tidy": {
+  "ar": "تنظيم المكتبة في فئات",
+  "en": "Organise library into categories"
+ },
+ "plus.agents.watcher": {
+  "ar": "مراقب الفصول",
+  "en": "Chapter watcher"
+ },
+ "plus.ai.hits": {
+  "ar": "%{n} نتيجة",
+  "en": "%{n} results"
+ },
+ "plus.ai.level": {
+  "ar": "مستوى الصعوبة",
+  "en": "Difficulty"
+ },
+ "plus.ai.levelText.1": {
+  "ar": "نص سهل جدًا، مناسب للقراءة السريعة.",
+  "en": "Very easy text, good for quick reading."
+ },
+ "plus.ai.levelText.2": {
+  "ar": "نص سهل بجمل قصيرة.",
+  "en": "Easy text with short sentences."
+ },
+ "plus.ai.levelText.3": {
+  "ar": "نص متوسط الصعوبة.",
+  "en": "Medium difficulty."
+ },
+ "plus.ai.levelText.4": {
+  "ar": "نص صعب بجمل طويلة ومفردات متنوعة.",
+  "en": "Hard text with long sentences and rich vocabulary."
+ },
+ "plus.ai.levelText.5": {
+  "ar": "نص صعب جدًا، يحتاج تركيزًا.",
+  "en": "Very hard text, needs focus."
+ },
+ "plus.ai.mentions": {
+  "ar": "%{n} مرة",
+  "en": "%{n} times"
+ },
+ "plus.ai.newQuiz": {
+  "ar": "أسئلة أخرى",
+  "en": "New questions"
+ },
+ "plus.ai.noNames": {
+  "ar": "لم تُكتشف أسماء متكررة",
+  "en": "No recurring names found"
+ },
+ "plus.ai.offlineBody": {
+  "ar": "لا إنترنت ولا مفتاح ولا حصة: تحليل نصي محلي للفصل الذي تختاره.",
+  "en": "No internet, no key, no quota: local text analysis of the chapter you pick."
+ },
+ "plus.ai.offlineTitle": {
+  "ar": "يعمل على جهازك بالكامل",
+  "en": "Runs fully on your device"
+ },
+ "plus.ai.pickFirst": {
+  "ar": "اختر رواية من مكتبتك للبدء",
+  "en": "Pick a novel from your library to start"
+ },
+ "plus.ai.quizShort": {
+  "ar": "الفصل قصير جدًا لصنع أسئلة",
+  "en": "The chapter is too short for a quiz"
+ },
+ "plus.ai.recapNone": {
+  "ar": "لم تقرأ فصولًا من هذه الرواية بعد",
+  "en": "You haven't read any chapters of this novel yet"
+ },
+ "plus.ai.runRecap": {
+  "ar": "لخّص آخر ٣ فصول قرأتها",
+  "en": "Recap my last 3 chapters"
+ },
+ "plus.ai.score": {
+  "ar": "أجبت %{ok} من %{n} إجابة صحيحة",
+  "en": "%{ok} of %{n} correct"
+ },
+ "plus.ai.searchHelp": {
+  "ar": "البحث لا يتأثر بالتشكيل والهمزات",
+  "en": "Search ignores diacritics and hamza forms"
+ },
+ "plus.ai.searchLabel": {
+  "ar": "ابحث في الفصول المنزّلة",
+  "en": "Search downloaded chapters"
+ },
+ "plus.ai.sentenceLen": {
+  "ar": "كلمة لكل جملة",
+  "en": "Words per sentence"
+ },
+ "plus.ai.title": {
+  "ar": "الذكاء المحلي",
+  "en": "On-device AI"
+ },
+ "plus.ai.unavailable": {
+  "ar": "تعذّر قراءة هذا الفصل. نزّله أولًا أو تأكد من تثبيت إضافته.",
+  "en": "Couldn't read this chapter. Download it first or make sure its plugin is installed."
+ },
+ "plus.ai.words": {
+  "ar": "كلمات",
+  "en": "Words"
+ },
+ "plus.backup.autoOn": {
+  "ar": "تفعيل النسخ التلقائي",
+  "en": "Enable auto backup"
+ },
+ "plus.backup.badFormat": {
+  "ar": "هذا الملف ليس نسخة سَرد",
+  "en": "This file is not a Sard backup"
+ },
+ "plus.backup.choosePassword": {
+  "ar": "اختر كلمة مرور للنسخة",
+  "en": "Choose a backup password"
+ },
+ "plus.backup.daily": {
+  "ar": "يوميًا",
+  "en": "Daily"
+ },
+ "plus.backup.enterPassword": {
+  "ar": "كلمة مرور النسخة",
+  "en": "Backup password"
+ },
+ "plus.backup.export": {
+  "ar": "تصدير نسخة",
+  "en": "Export backup"
+ },
+ "plus.backup.exportEncrypted": {
+  "ar": "تصدير نسخة مشفّرة",
+  "en": "Export encrypted backup"
+ },
+ "plus.backup.files": {
+  "ar": "النسخ على الجهاز (%{n})",
+  "en": "Backups on device (%{n})"
+ },
+ "plus.backup.fullBackup": {
+  "ar": "النسخة الكاملة للمكتبة",
+  "en": "Full library backup"
+ },
+ "plus.backup.fullBackupDesc": {
+  "ar": "نسخة LNReader الكاملة: الروايات والفصول والفئات والإعدادات",
+  "en": "The full LNReader backup: novels, chapters, categories, settings"
+ },
+ "plus.backup.import": {
+  "ar": "استيراد نسخة",
+  "en": "Import backup"
+ },
+ "plus.backup.interval": {
+  "ar": "التكرار",
+  "en": "Frequency"
+ },
+ "plus.backup.keep": {
+  "ar": "عدد النسخ المحفوظة",
+  "en": "Copies to keep"
+ },
+ "plus.backup.last": {
+  "ar": "آخر نسخة",
+  "en": "Last backup"
+ },
+ "plus.backup.more": {
+  "ar": "أدوات أخرى",
+  "en": "More tools"
+ },
+ "plus.backup.never": {
+  "ar": "لم تُنشأ بعد",
+  "en": "Not yet"
+ },
+ "plus.backup.notesMd": {
+  "ar": "مشاركة ملاحظاتي كنص",
+  "en": "Share my notes as text"
+ },
+ "plus.backup.password": {
+  "ar": "كلمة المرور",
+  "en": "Password"
+ },
+ "plus.backup.passwordHelp": {
+  "ar": "٦ أحرف على الأقل. لا يمكن فتح النسخة بدونها، احفظها جيدًا.",
+  "en": "At least 6 characters. The backup can't be opened without it."
+ },
+ "plus.backup.restore": {
+  "ar": "استرجاع",
+  "en": "Restore"
+ },
+ "plus.backup.restored": {
+  "ar": "استُرجعت %{b} علامة و%{v} مفردة و%{tg} وسمًا و%{h} تظليلًا",
+  "en": "Restored %{b} bookmarks, %{v} words, %{tg} tags, %{h} highlights"
+ },
+ "plus.backup.runNow": {
+  "ar": "انسخ الآن",
+  "en": "Back up now"
+ },
+ "plus.backup.saved": {
+  "ar": "حُفظت النسخة في مجلد سَرد",
+  "en": "Backup saved in the Sard folder"
+ },
+ "plus.backup.title": {
+  "ar": "الأدوات والنسخ الاحتياطي",
+  "en": "Tools & backup"
+ },
+ "plus.backup.weakPassword": {
+  "ar": "كلمة المرور قصيرة (٦ أحرف على الأقل)",
+  "en": "Password too short (min 6 characters)"
+ },
+ "plus.backup.weekly": {
+  "ar": "أسبوعيًا",
+  "en": "Weekly"
+ },
+ "plus.backup.wrongPassword": {
+  "ar": "كلمة المرور غير صحيحة",
+  "en": "Wrong password"
+ },
+ "plus.bookmarks.addHere": {
+  "ar": "ضع علامة هنا",
+  "en": "Bookmark this spot"
+ },
+ "plus.bookmarks.addNote": {
+  "ar": "أضف ملاحظة",
+  "en": "Add note"
+ },
+ "plus.bookmarks.added": {
+  "ar": "أُضيفت العلامة",
+  "en": "Bookmark added"
+ },
+ "plus.bookmarks.editNote": {
+  "ar": "تعديل الملاحظة",
+  "en": "Edit note"
+ },
+ "plus.bookmarks.empty": {
+  "ar": "لا توجد علامات بعد. افتح فصلًا ثم من «سَرد+» في إعدادات القارئ اختر «ضع علامة هنا».",
+  "en": "No bookmarks yet. In a chapter open reader settings › «سَرد+» › «Bookmark this spot»."
+ },
+ "plus.bookmarks.missing": {
+  "ar": "هذا الفصل لم يعد موجودًا",
+  "en": "This chapter no longer exists"
+ },
+ "plus.bookmarks.noNote": {
+  "ar": "بدون ملاحظة",
+  "en": "No note"
+ },
+ "plus.bookmarks.notePlaceholder": {
+  "ar": "ملاحظة (اختياري)",
+  "en": "Note (optional)"
+ },
+ "plus.bookmarks.title": {
+  "ar": "العلامات",
+  "en": "Bookmarks"
+ },
+ "plus.changelog.intro": {
+  "ar": "الإصدار الذهبي: عضويات بأربعة مستويات و%{n} ميزة جديدة في ثمانية أقسام، كلها تعمل على جهازك.",
+  "en": "The golden release: four membership tiers and %{n} new features in eight areas, all on your device."
+ },
+ "plus.changelog.version": {
+  "ar": "سَرد %{v}",
+  "en": "Sard %{v}"
+ },
+ "plus.common.down": {
+  "ar": "لأسفل",
+  "en": "Down"
+ },
+ "plus.common.next": {
+  "ar": "التالي",
+  "en": "Next"
+ },
+ "plus.common.off": {
+  "ar": "متوقف",
+  "en": "Off"
+ },
+ "plus.common.reset": {
+  "ar": "إعادة ضبط",
+  "en": "Reset"
+ },
+ "plus.common.saved": {
+  "ar": "تم الحفظ",
+  "en": "Saved"
+ },
+ "plus.common.up": {
+  "ar": "لأعلى",
+  "en": "Up"
+ },
+ "plus.diag.area.library": {
+  "ar": "الفلاتر وقائمة التالي واقتباس اليوم",
+  "en": "Filters, up next and quote of the day"
+ },
+ "plus.diag.area.motivation": {
+  "ar": "الإنجازات والتحديات والتجميد",
+  "en": "Achievements, challenges and freezes"
+ },
+ "plus.diag.area.offline": {
+  "ar": "جدولة التنزيل والتنظيف",
+  "en": "Download scheduler and cleanup"
+ },
+ "plus.diag.area.reader": {
+  "ar": "إعدادات القراءة في سَرد+",
+  "en": "Sard+ reading settings"
+ },
+ "plus.diag.area.tools": {
+  "ar": "النسخ التلقائي وجدولة الوكلاء",
+  "en": "Auto backup and agent scheduling"
+ },
+ "plus.diag.copy": {
+  "ar": "انسخ التقرير",
+  "en": "Copy report"
+ },
+ "plus.diag.db": {
+  "ar": "قاعدة البيانات",
+  "en": "Database"
+ },
+ "plus.diag.free": {
+  "ar": "المساحة الحرة %{s}",
+  "en": "%{s} free"
+ },
+ "plus.diag.keys": {
+  "ar": "%{n} مفتاح إعدادات لسَرد",
+  "en": "%{n} Sard setting keys"
+ },
+ "plus.diag.library": {
+  "ar": "المكتبة",
+  "en": "Library"
+ },
+ "plus.diag.libraryDetail": {
+  "ar": "%{n} رواية · %{c} فصل · %{d} منزّل",
+  "en": "%{n} novels · %{c} chapters · %{d} downloaded"
+ },
+ "plus.diag.membership": {
+  "ar": "العضوية",
+  "en": "Membership"
+ },
+ "plus.diag.plugins": {
+  "ar": "الإضافات",
+  "en": "Plugins"
+ },
+ "plus.diag.pluginsDetail": {
+  "ar": "%{n} إضافة مثبتة",
+  "en": "%{n} plugins installed"
+ },
+ "plus.diag.rerun": {
+  "ar": "أعد الفحص",
+  "en": "Run again"
+ },
+ "plus.diag.reset": {
+  "ar": "إعادة ضبط قسم",
+  "en": "Reset an area"
+ },
+ "plus.diag.resetDone": {
+  "ar": "رجع القسم لإعداداته الافتراضية",
+  "en": "Area reset to defaults"
+ },
+ "plus.diag.sardDetail": {
+  "ar": "%{h} تظليل · %{b} علامة · %{v} مفردة · %{tg} وسم",
+  "en": "%{h} highlights · %{b} bookmarks · %{v} words · %{tg} tags"
+ },
+ "plus.diag.sardTables": {
+  "ar": "بيانات سَرد",
+  "en": "Sard data"
+ },
+ "plus.diag.settings": {
+  "ar": "الإعدادات",
+  "en": "Settings"
+ },
+ "plus.diag.storage": {
+  "ar": "التخزين",
+  "en": "Storage"
+ },
+ "plus.diag.version": {
+  "ar": "الإصدار",
+  "en": "Version"
+ },
+ "plus.export.customCover": {
+  "ar": "غلاف مخصص من صورة",
+  "en": "Custom cover from an image"
+ },
+ "plus.export.customCoverHelp": {
+  "ar": "اختر صورة من جهازك لتكون غلاف الملف",
+  "en": "Pick an image from your device as the cover"
+ },
+ "plus.export.customCoverSet": {
+  "ar": "تم اختيار صورة. اضغط لإلغائها",
+  "en": "Image picked. Tap to remove"
+ },
+ "plus.export.proOnly": {
+  "ar": "متاح في برو وأسطورة",
+  "en": "Available in Pro and Legend"
+ },
+ "plus.hub.badges": {
+  "ar": "%{n} من %{total} شارة",
+  "en": "%{n} of %{total} badges"
+ },
+ "plus.hub.categories": {
+  "ar": "الأقسام",
+  "en": "Categories"
+ },
+ "plus.hub.level": {
+  "ar": "المستوى %{n} · %{title}",
+  "en": "Level %{n} · %{title}"
+ },
+ "plus.hub.openOf": {
+  "ar": "%{open} من %{total} ميزة متاحة",
+  "en": "%{open} of %{total} features open"
+ },
+ "plus.hub.quick": {
+  "ar": "اختصارات",
+  "en": "Shortcuts"
+ },
+ "plus.hub.streak": {
+  "ar": "سلسلة %{n} يوم",
+  "en": "%{n}-day streak"
+ },
+ "plus.hub.title": {
+  "ar": "سَرد+",
+  "en": "Sard+"
+ },
+ "plus.hub.today": {
+  "ar": "تحدي اليوم",
+  "en": "Today's challenge"
+ },
+ "plus.hub.xp": {
+  "ar": "%{xp} نقطة خبرة · باقٍ %{next} للمستوى التالي",
+  "en": "%{xp} XP · %{next} to the next level"
+ },
+ "plus.library.another": {
+  "ar": "غيرها",
+  "en": "Another"
+ },
+ "plus.library.anyTag": {
+  "ar": "أي من الوسوم",
+  "en": "Any of the tags"
+ },
+ "plus.library.bulkHelp": {
+  "ar": "اضغط رواية لتقييمها ووسمها، واضغط مطولًا لتحديد عدة روايات.",
+  "en": "Tap a novel to rate and tag it, long-press to select several."
+ },
+ "plus.library.bulkHide": {
+  "ar": "إخفاء",
+  "en": "Hide"
+ },
+ "plus.library.bulkStatus": {
+  "ar": "تغيير الحالة",
+  "en": "Set status"
+ },
+ "plus.library.bulkTag": {
+  "ar": "إضافة وسم",
+  "en": "Add tag"
+ },
+ "plus.library.downloadedOnly": {
+  "ar": "منزّلة",
+  "en": "Downloaded"
+ },
+ "plus.library.filterDefault": {
+  "ar": "فلتري",
+  "en": "My filter"
+ },
+ "plus.library.filterName": {
+  "ar": "اسم الفلتر",
+  "en": "Filter name"
+ },
+ "plus.library.hidden": {
+  "ar": "أُخفيت %{n} رواية في الرف المخفي",
+  "en": "Moved %{n} novels to the hidden shelf"
+ },
+ "plus.library.hideOne": {
+  "ar": "إلى الرف المخفي",
+  "en": "To hidden shelf"
+ },
+ "plus.library.minRating": {
+  "ar": "أقل تقييم",
+  "en": "Minimum rating"
+ },
+ "plus.library.mode.any": {
+  "ar": "أي رواية",
+  "en": "Any novel"
+ },
+ "plus.library.mode.planned": {
+  "ar": "مخطط لها",
+  "en": "Planned"
+ },
+ "plus.library.mode.unread": {
+  "ar": "فيها فصول جديدة",
+  "en": "Has unread"
+ },
+ "plus.library.mode.unstarted": {
+  "ar": "لم أبدأها",
+  "en": "Not started"
+ },
+ "plus.library.newFilter": {
+  "ar": "فلتر ذكي جديد",
+  "en": "New smart filter"
+ },
+ "plus.library.newTag": {
+  "ar": "وسم جديد",
+  "en": "New tag"
+ },
+ "plus.library.noStatus": {
+  "ar": "بدون حالة",
+  "en": "No status"
+ },
+ "plus.library.note": {
+  "ar": "ملاحظة شخصية",
+  "en": "Personal note"
+ },
+ "plus.library.novels": {
+  "ar": "الروايات (%{n})",
+  "en": "Novels (%{n})"
+ },
+ "plus.library.progress": {
+  "ar": "قرأت %{p}٪ · %{unread} فصل غير مقروء",
+  "en": "%{p}% read · %{unread} unread chapters"
+ },
+ "plus.library.queueAdd": {
+  "ar": "أضف للتالي",
+  "en": "Add to up next"
+ },
+ "plus.library.queueEmpty": {
+  "ar": "القائمة فارغة. أضف روايات من القائمة بالأسفل أو من «فاجئني».",
+  "en": "The queue is empty. Add novels from the list below or from «Surprise me»."
+ },
+ "plus.library.queued": {
+  "ar": "أُضيفت %{n} رواية إلى «التالي للقراءة»",
+  "en": "Added %{n} novels to up next"
+ },
+ "plus.library.renameHelp": {
+  "ar": "اترك الاسم فارغًا لحذف الوسم",
+  "en": "Leave the name empty to delete the tag"
+ },
+ "plus.library.renameTag": {
+  "ar": "تعديل الوسم",
+  "en": "Edit tag"
+ },
+ "plus.library.selected": {
+  "ar": "محدد %{n}",
+  "en": "%{n} selected"
+ },
+ "plus.library.statusSet": {
+  "ar": "تغيّرت حالة %{n} رواية",
+  "en": "Status set for %{n} novels"
+ },
+ "plus.library.surprise": {
+  "ar": "فاجئني",
+  "en": "Surprise me"
+ },
+ "plus.library.surpriseNone": {
+  "ar": "لا توجد رواية تناسب هذا الاختيار",
+  "en": "No novel fits this choice"
+ },
+ "plus.library.tagHelp": {
+  "ar": "اضغط وسمًا للتصفية، واضغط مطولًا لتعديله أو حذفه.",
+  "en": "Tap a tag to filter, long-press to edit or delete it."
+ },
+ "plus.library.tagName": {
+  "ar": "اسم الوسم",
+  "en": "Tag name"
+ },
+ "plus.library.tagged": {
+  "ar": "وُسمت %{n} رواية بـ #%{tag}",
+  "en": "Tagged %{n} novels with #%{tag}"
+ },
+ "plus.library.tagsField": {
+  "ar": "الوسوم (افصل بفاصلة)",
+  "en": "Tags (comma separated)"
+ },
+ "plus.library.textContains": {
+  "ar": "يحتوي الاسم أو الكاتب على",
+  "en": "Name or author contains"
+ },
+ "plus.library.title": {
+  "ar": "المكتبة والتنظيم",
+  "en": "Library & organising"
+ },
+ "plus.library.unreadOnly": {
+  "ar": "فيها غير مقروء",
+  "en": "Has unread"
+ },
+ "plus.lock.bioPrompt": {
+  "ar": "افتح سَرد",
+  "en": "Unlock Sard"
+ },
+ "plus.lock.biometric": {
+  "ar": "البصمة",
+  "en": "Biometrics"
+ },
+ "plus.lock.blocked": {
+  "ar": "محاولات كثيرة. انتظر %{s} ثانية",
+  "en": "Too many tries. Wait %{s} s"
+ },
+ "plus.lock.delete": {
+  "ar": "حذف رقم",
+  "en": "Delete digit"
+ },
+ "plus.lock.pinLength": {
+  "ar": "تم إدخال %{n} أرقام",
+  "en": "%{n} digits entered"
+ },
+ "plus.lock.title": {
+  "ar": "سَرد مقفل",
+  "en": "Sard is locked"
+ },
+ "plus.lock.unlock": {
+  "ar": "فتح",
+  "en": "Unlock"
+ },
+ "plus.lock.usePin": {
+  "ar": "استخدم الرمز",
+  "en": "Use PIN"
+ },
+ "plus.lock.wrong": {
+  "ar": "رمز غير صحيح، حاول مرة أخرى",
+  "en": "Wrong PIN, try again"
+ },
+ "plus.look.appTheme": {
+  "ar": "مظهر التطبيق",
+  "en": "App appearance"
+ },
+ "plus.look.backToDefault": {
+  "ar": "إلغاء الثيم المميز",
+  "en": "Remove the premium theme"
+ },
+ "plus.look.readerSettings": {
+  "ar": "إعدادات القارئ",
+  "en": "Reader settings"
+ },
+ "plus.look.themeApplied": {
+  "ar": "طُبّق ثيم «%{name}» على القارئ",
+  "en": "«%{name}» applied to the reader"
+ },
+ "plus.look.themeCleared": {
+  "ar": "رجع القارئ لألوانه",
+  "en": "Reader colours restored"
+ },
+ "plus.look.themeHelp": {
+  "ar": "يُطبَّق الثيم على ألوان القارئ ويمكنك تعديلها بعد ذلك من إعدادات القارئ.",
+  "en": "The theme sets the reader colours; you can still adjust them in reader settings."
+ },
+ "plus.look.title": {
+  "ar": "التخصيص والمظهر",
+  "en": "Look & feel"
+ },
+ "plus.look.typography": {
+  "ar": "الزخرفة والتقدّم",
+  "en": "Ornaments & progress"
+ },
+ "plus.more.daysLeft": {
+  "ar": "باقٍ %{n} يوم",
+  "en": "%{n} days left"
+ },
+ "plus.more.plusDesc": {
+  "ar": "أدوات القراءة والمكتبة والأوفلاين والتحفيز والخصوصية",
+  "en": "Reading, library, offline, motivation and privacy tools"
+ },
+ "plus.motivation.badges": {
+  "ar": "الشارات",
+  "en": "Badges"
+ },
+ "plus.motivation.challengeDone": {
+  "ar": "أنجزت تحدي اليوم! عُد غدًا لتحدٍّ جديد",
+  "en": "Done for today! Come back tomorrow"
+ },
+ "plus.motivation.challengeHint": {
+  "ar": "أنجزت %{n} تحديًا حتى الآن · ٢٥ خبرة لكل تحدٍّ",
+  "en": "%{n} challenges done so far · 25 XP each"
+ },
+ "plus.motivation.challengeName": {
+  "ar": "اسم التحدي (اختياري)",
+  "en": "Challenge name (optional)"
+ },
+ "plus.motivation.daysLeft": {
+  "ar": "باقٍ %{n} يوم",
+  "en": "%{n} days left"
+ },
+ "plus.motivation.duration": {
+  "ar": "المدة بالأيام",
+  "en": "Duration in days"
+ },
+ "plus.motivation.freezeUsed": {
+  "ar": "حمى %{n} يوم",
+  "en": "Protected %{n} days"
+ },
+ "plus.motivation.freezes": {
+  "ar": "لديك %{n} من %{cap} تجميد",
+  "en": "%{n} of %{cap} freezes banked"
+ },
+ "plus.motivation.goal.chapters": {
+  "ar": "%{v} / %{target} فصل",
+  "en": "%{v} / %{target} chapters"
+ },
+ "plus.motivation.goal.minutes": {
+  "ar": "%{v} / %{target} دقيقة",
+  "en": "%{v} / %{target} minutes"
+ },
+ "plus.motivation.goal.novels": {
+  "ar": "%{v} / %{target} رواية",
+  "en": "%{v} / %{target} novels"
+ },
+ "plus.motivation.goalDone": {
+  "ar": "أُنجز",
+  "en": "Done"
+ },
+ "plus.motivation.goalExpired": {
+  "ar": "انتهت المدة",
+  "en": "Expired"
+ },
+ "plus.motivation.kind.chapters": {
+  "ar": "فصول",
+  "en": "Chapters"
+ },
+ "plus.motivation.kind.minutes": {
+  "ar": "دقائق",
+  "en": "Minutes"
+ },
+ "plus.motivation.kind.novels": {
+  "ar": "روايات",
+  "en": "Novels"
+ },
+ "plus.motivation.longest": {
+  "ar": "أطول سلسلة",
+  "en": "Longest streak"
+ },
+ "plus.motivation.more": {
+  "ar": "المزيد",
+  "en": "More"
+ },
+ "plus.motivation.newChallenge": {
+  "ar": "تحدٍّ جديد",
+  "en": "New challenge"
+ },
+ "plus.motivation.next": {
+  "ar": "الشارات القادمة",
+  "en": "Next badges"
+ },
+ "plus.motivation.noneYet": {
+  "ar": "لم تفتح أي شارة بعد. اقرأ فصلًا لتبدأ!",
+  "en": "No badges yet. Read a chapter to start!"
+ },
+ "plus.motivation.stats": {
+  "ar": "الإحصاءات والأهداف",
+  "en": "Statistics & goals"
+ },
+ "plus.motivation.streak": {
+  "ar": "السلسلة الحالية",
+  "en": "Current streak"
+ },
+ "plus.motivation.target": {
+  "ar": "الهدف (عدد)",
+  "en": "Target (number)"
+ },
+ "plus.motivation.title": {
+  "ar": "الإنجازات والتحديات",
+  "en": "Achievements & challenges"
+ },
+ "plus.motivation.unlocked": {
+  "ar": "شاراتك (%{n})",
+  "en": "Your badges (%{n})"
+ },
+ "plus.offline.anyTime": {
+  "ar": "أي وقت",
+  "en": "Any time"
+ },
+ "plus.offline.byTag": {
+  "ar": "اختر وسمًا للتنزيل",
+  "en": "Pick a tag to download"
+ },
+ "plus.offline.cap": {
+  "ar": "لديك %{n} من %{cap} فصل منزّل",
+  "en": "%{n} of %{cap} downloaded chapters"
+ },
+ "plus.offline.capReached": {
+  "ar": "وصلت إلى حد %{cap} فصل منزّل في المجاني. احذف المقروء أو فعّل عضوية",
+  "en": "You reached the free limit of %{cap} downloaded chapters. Delete read ones or upgrade"
+ },
+ "plus.offline.capUnlimited": {
+  "ar": "لديك %{n} فصل منزّل · بلا حد لعضويتك",
+  "en": "%{n} downloaded chapters · unlimited with your plan"
+ },
+ "plus.offline.chargingOnly": {
+  "ar": "أثناء الشحن فقط",
+  "en": "Only while charging"
+ },
+ "plus.offline.check": {
+  "ar": "افحص",
+  "en": "Check"
+ },
+ "plus.offline.checked": {
+  "ar": "فُحص %{n} فصل · %{broken} معطوب",
+  "en": "Checked %{n} chapters · %{broken} broken"
+ },
+ "plus.offline.cleanDays": {
+  "ar": "احذف بعد",
+  "en": "Delete after"
+ },
+ "plus.offline.cleanNow": {
+  "ar": "نظّف الآن",
+  "en": "Clean now"
+ },
+ "plus.offline.cleanOn": {
+  "ar": "تفعيل التنظيف الذكي",
+  "en": "Enable smart cleanup"
+ },
+ "plus.offline.clearWindow": {
+  "ar": "إلغاء الساعات",
+  "en": "Clear hours"
+ },
+ "plus.offline.deleteAll": {
+  "ar": "الكل",
+  "en": "All"
+ },
+ "plus.offline.deleteRead": {
+  "ar": "المقروء",
+  "en": "Read"
+ },
+ "plus.offline.deleteReadAll": {
+  "ar": "احذف كل الفصول المقروءة المنزّلة",
+  "en": "Delete all read downloads"
+ },
+ "plus.offline.deleted": {
+  "ar": "حُذف %{n} فصل منزّل",
+  "en": "Deleted %{n} downloaded chapters"
+ },
+ "plus.offline.downloaded": {
+  "ar": "فصل منزّل",
+  "en": "Downloaded chapters"
+ },
+ "plus.offline.fix": {
+  "ar": "افحص وأصلح",
+  "en": "Check & fix"
+ },
+ "plus.offline.fixed": {
+  "ar": "أُعيدت جدولة %{n} فصل معطوب للتنزيل",
+  "en": "Re-queued %{n} broken chapters"
+ },
+ "plus.offline.free": {
+  "ar": "المساحة الحرة",
+  "en": "Free space"
+ },
+ "plus.offline.keepBookmarked": {
+  "ar": "احتفظ بالفصول التي عليها علامة",
+  "en": "Keep bookmarked chapters"
+ },
+ "plus.offline.none": {
+  "ar": "لا توجد فصول منزّلة",
+  "en": "No downloaded chapters"
+ },
+ "plus.offline.novelLine": {
+  "ar": "%{n} فصل · %{read} مقروء · %{size}",
+  "en": "%{n} chapters · %{read} read · %{size}"
+ },
+ "plus.offline.preview": {
+  "ar": "معاينة",
+  "en": "Preview"
+ },
+ "plus.offline.queued": {
+  "ar": "أُضيف %{n} فصل إلى قائمة التنزيل",
+  "en": "Queued %{n} chapters"
+ },
+ "plus.offline.schedHelp": {
+  "ar": "تنتظر التنزيلات في قائمة المهام حتى تتحقق الشروط ثم تكمل وحدها.",
+  "en": "Downloads wait in the task queue until the conditions are met, then continue."
+ },
+ "plus.offline.schedOn": {
+  "ar": "تفعيل جدولة التنزيل",
+  "en": "Enable download scheduler"
+ },
+ "plus.offline.tagNovels": {
+  "ar": "%{n} رواية",
+  "en": "%{n} novels"
+ },
+ "plus.offline.title": {
+  "ar": "التنزيل والأوفلاين",
+  "en": "Downloads & offline"
+ },
+ "plus.offline.used": {
+  "ar": "المساحة المستخدمة",
+  "en": "Space used"
+ },
+ "plus.offline.wait.charging": {
+  "ar": "بانتظار الشحن",
+  "en": "Waiting for charging"
+ },
+ "plus.offline.wait.offline": {
+  "ar": "بانتظار الاتصال",
+  "en": "Waiting for a connection"
+ },
+ "plus.offline.wait.wifi": {
+  "ar": "بانتظار واي فاي",
+  "en": "Waiting for Wi-Fi"
+ },
+ "plus.offline.wait.window": {
+  "ar": "بانتظار ساعات التنزيل",
+  "en": "Waiting for download hours"
+ },
+ "plus.offline.wifiOnly": {
+  "ar": "على واي فاي فقط",
+  "en": "Wi-Fi only"
+ },
+ "plus.offline.windowEnd": {
+  "ar": "إلى الساعة",
+  "en": "Until"
+ },
+ "plus.offline.windowStart": {
+  "ar": "من الساعة",
+  "en": "From"
+ },
+ "plus.offline.wouldDelete": {
+  "ar": "سيُحذف %{n} فصل",
+  "en": "%{n} chapters would be deleted"
+ },
+ "plus.privacy.always": {
+  "ar": "فورًا",
+  "en": "Immediately"
+ },
+ "plus.privacy.biometric": {
+  "ar": "البصمة أو الوجه",
+  "en": "Fingerprint or face"
+ },
+ "plus.privacy.biometricHelp": {
+  "ar": "يُطلب الرمز فقط إذا فشلت البصمة",
+  "en": "PIN is only asked if biometrics fail"
+ },
+ "plus.privacy.biometricNone": {
+  "ar": "لا توجد بصمة مسجلة على الجهاز؛ سيُستخدم الرمز",
+  "en": "No biometrics enrolled; the PIN is used"
+ },
+ "plus.privacy.changePin": {
+  "ar": "تغيير الرمز",
+  "en": "Change PIN"
+ },
+ "plus.privacy.clearNow": {
+  "ar": "امسح الآن",
+  "en": "Clear now"
+ },
+ "plus.privacy.cleared": {
+  "ar": "مُسح السجل وروابط وضع القراءة",
+  "en": "History and reader-mode links cleared"
+ },
+ "plus.privacy.confirmChange": {
+  "ar": "أكّد الرمز الحالي",
+  "en": "Confirm the current PIN"
+ },
+ "plus.privacy.confirmOff": {
+  "ar": "أكّد لإيقاف القفل",
+  "en": "Confirm to turn the lock off"
+ },
+ "plus.privacy.confirmPin": {
+  "ar": "أعد كتابة الرمز",
+  "en": "Repeat the PIN"
+ },
+ "plus.privacy.hideAgain": {
+  "ar": "أخفِ الرف مرة أخرى",
+  "en": "Hide the shelf again"
+ },
+ "plus.privacy.lockOn": {
+  "ar": "قفل التطبيق",
+  "en": "App lock"
+ },
+ "plus.privacy.manageInLibrary": {
+  "ar": "أخفِ روايات من أدوات المكتبة",
+  "en": "Hide novels from library tools"
+ },
+ "plus.privacy.newPin": {
+  "ar": "اكتب رمزًا جديدًا",
+  "en": "Enter a new PIN"
+ },
+ "plus.privacy.pinHelp": {
+  "ar": "من ٤ إلى ٨ أرقام",
+  "en": "4 to 8 digits"
+ },
+ "plus.privacy.pinMismatch": {
+  "ar": "الرمزان غير متطابقين، ابدأ من جديد",
+  "en": "PINs don't match, start again"
+ },
+ "plus.privacy.pinSet": {
+  "ar": "فُعّل قفل التطبيق",
+  "en": "App lock on"
+ },
+ "plus.privacy.relock": {
+  "ar": "القفل بعد الخروج بمدة",
+  "en": "Lock after leaving for"
+ },
+ "plus.privacy.removePin": {
+  "ar": "إيقاف القفل وحذف الرمز",
+  "en": "Turn off lock and remove PIN"
+ },
+ "plus.privacy.removed": {
+  "ar": "أُوقف القفل",
+  "en": "Lock turned off"
+ },
+ "plus.privacy.reveal": {
+  "ar": "أظهر الرف المخفي",
+  "en": "Reveal hidden shelf"
+ },
+ "plus.privacy.revealReason": {
+  "ar": "أكّد لإظهار الرف المخفي",
+  "en": "Confirm to reveal the hidden shelf"
+ },
+ "plus.privacy.revealed": {
+  "ar": "الرف المخفي ظاهر حتى تقفل التطبيق",
+  "en": "Hidden shelf shown until the app locks"
+ },
+ "plus.privacy.seconds": {
+  "ar": "%{n} ثانية",
+  "en": "%{n} seconds"
+ },
+ "plus.privacy.setPin": {
+  "ar": "تعيين رمز PIN",
+  "en": "Set a PIN"
+ },
+ "plus.privacy.shelfHelp": {
+  "ar": "في الرف المخفي %{n} رواية. لا تظهر في المكتبة إلا بعد فتحها هنا.",
+  "en": "%{n} novels on the hidden shelf. They only show in the library after you reveal them here."
+ },
+ "plus.privacy.shelfNeedsUnlock": {
+  "ar": "إظهار الرف يحتاج الرمز",
+  "en": "Revealing needs the PIN"
+ },
+ "plus.privacy.title": {
+  "ar": "الخصوصية والأمان",
+  "en": "Privacy & security"
+ },
+ "plus.privacy.unhide": {
+  "ar": "إظهار",
+  "en": "Unhide"
+ },
+ "plus.profiles.applied": {
+  "ar": "طُبّق الملف «%{name}»",
+  "en": "Applied «%{name}»"
+ },
+ "plus.profiles.appliedReopen": {
+  "ar": "طُبّق الملف. يظهر بالكامل عند الفصل التالي",
+  "en": "Profile applied. Fully visible from the next chapter"
+ },
+ "plus.profiles.bound": {
+  "ar": "مرتبط بـ %{n} رواية",
+  "en": "Bound to %{n} novels"
+ },
+ "plus.profiles.help": {
+  "ar": "يحفظ الخط والحجم والألوان وإعدادات العربية. مستواك يسمح بـ %{n} ملف.",
+  "en": "Saves font, size, colours and Arabic settings. Your tier allows %{n}."
+ },
+ "plus.profiles.name": {
+  "ar": "اسم الملف",
+  "en": "Profile name"
+ },
+ "plus.profiles.none": {
+  "ar": "بدون ملف",
+  "en": "No profile"
+ },
+ "plus.profiles.saveCurrent": {
+  "ar": "احفظ الإعدادات الحالية كملف",
+  "en": "Save current settings as a profile"
+ },
+ "plus.profiles.saved": {
+  "ar": "حُفظ الملف «%{name}»",
+  "en": "Profile «%{name}» saved"
+ },
+ "plus.profiles.title": {
+  "ar": "ملفات القارئ",
+  "en": "Reader profiles"
+ },
+ "plus.quote.title": {
+  "ar": "اقتباس اليوم من تظليلاتك",
+  "en": "Quote of the day from your highlights"
+ },
+ "plus.reader.blueLight": {
+  "ar": "فلتر الضوء الأزرق",
+  "en": "Blue-light filter"
+ },
+ "plus.reader.eyes": {
+  "ar": "راحة العين والتقليب",
+  "en": "Eye comfort & page turns"
+ },
+ "plus.reader.haptics": {
+  "ar": "اهتزاز خفيف عند التقليب",
+  "en": "Light vibration on page turn"
+ },
+ "plus.reader.sessionDone": {
+  "ar": "انتهت جلسة القراءة (%{n} دقيقة). خذ استراحة قصيرة",
+  "en": "Reading session done (%{n} min). Take a short break"
+ },
+ "plus.reader.sound": {
+  "ar": "صوت التقليب",
+  "en": "Page-turn sound"
+ },
+ "plus.reader.strength": {
+  "ar": "قوة الفلتر",
+  "en": "Filter strength"
+ },
+ "plus.reader.time": {
+  "ar": "وقت القراءة",
+  "en": "Reading time"
+ },
+ "plus.reader.timeLeft": {
+  "ar": "باقٍ تقريبًا %{min} دقيقة · %{words} كلمة · سرعتك %{wpm} كلمة/دقيقة",
+  "en": "About %{min} min left · %{words} words · %{wpm} wpm"
+ },
+ "plus.reader.timePill": {
+  "ar": "≈ %{min} دقيقة · %{words} كلمة",
+  "en": "≈ %{min} min · %{words} words"
+ },
+ "plus.reader.timeUnknown": {
+  "ar": "افتح فصلًا لمعرفة الوقت المتبقي",
+  "en": "Open a chapter to see the time left"
+ },
+ "plus.reader.vocabExists": {
+  "ar": "«%{word}» موجودة في دفترك بالفعل",
+  "en": "«%{word}» is already in your notebook"
+ },
+ "plus.reader.vocabHint": {
+  "ar": "لحفظ كلمة: حدّدها في النص ثم اختر «مفردة» من شريط التحديد.",
+  "en": "To save a word: select it in the text, then tap «مفردة» in the selection bar."
+ },
+ "plus.reader.vocabSaved": {
+  "ar": "أُضيفت «%{word}» إلى دفتر المفردات",
+  "en": "«%{word}» added to your vocabulary"
+ },
+ "plus.reader.vocabTooLong": {
+  "ar": "حدّد كلمة أو عبارة قصيرة",
+  "en": "Select a word or a short phrase"
+ },
+ "plus.reading.badTime": {
+  "ar": "اكتب الوقت بصيغة ساعة:دقيقة مثل 21:30",
+  "en": "Write the time as HH:MM, e.g. 21:30"
+ },
+ "plus.reading.nightDark": {
+  "ar": "خلفية داكنة أثناء الليل",
+  "en": "Dark background at night"
+ },
+ "plus.reading.nightEnd": {
+  "ar": "ينتهي الوضع الليلي",
+  "en": "Night ends"
+ },
+ "plus.reading.nightStart": {
+  "ar": "يبدأ الوضع الليلي",
+  "en": "Night starts"
+ },
+ "plus.reading.notebooks": {
+  "ar": "العلامات والمفردات",
+  "en": "Bookmarks & vocabulary"
+ },
+ "plus.reading.title": {
+  "ar": "أدوات القراءة",
+  "en": "Reading tools"
+ },
+ "plus.reading.turns": {
+  "ar": "التقليب",
+  "en": "Page turns"
+ },
+ "plus.reading.volume": {
+  "ar": "مستوى الصوت",
+  "en": "Volume"
+ },
+ "plus.reading.wpmDefault": {
+  "ar": "يتعلّم سَرد سرعتك بعد أن تُنهي فصولًا. الافتراضي %{wpm} كلمة/دقيقة",
+  "en": "Sard learns your speed as you finish chapters. Default %{wpm} wpm"
+ },
+ "plus.reading.wpmLearned": {
+  "ar": "سرعتك %{wpm} كلمة/دقيقة (من %{n} فصل)",
+  "en": "Your speed: %{wpm} wpm (from %{n} chapters)"
+ },
+ "plus.sound.chime": {
+  "ar": "جرس خفيف",
+  "en": "Soft chime"
+ },
+ "plus.sound.click": {
+  "ar": "نقرة",
+  "en": "Click"
+ },
+ "plus.sound.off": {
+  "ar": "بدون صوت",
+  "en": "No sound"
+ },
+ "plus.sound.paper": {
+  "ar": "ورق",
+  "en": "Paper"
+ },
+ "plus.vocab.add": {
+  "ar": "أضف كلمة",
+  "en": "Add a word"
+ },
+ "plus.vocab.addMeaning": {
+  "ar": "أضف معنى",
+  "en": "Add meaning"
+ },
+ "plus.vocab.again": {
+  "ar": "لم أعرفها",
+  "en": "Didn't know"
+ },
+ "plus.vocab.box": {
+  "ar": "الصندوق %{n} من %{max}",
+  "en": "Box %{n} of %{max}"
+ },
+ "plus.vocab.due": {
+  "ar": "للمراجعة",
+  "en": "Due"
+ },
+ "plus.vocab.editMeaning": {
+  "ar": "تعديل المعنى",
+  "en": "Edit meaning"
+ },
+ "plus.vocab.empty": {
+  "ar": "دفترك فارغ. حدّد كلمة أثناء القراءة واختر «مفردة».",
+  "en": "Your notebook is empty. Select a word while reading and tap «مفردة»."
+ },
+ "plus.vocab.knew": {
+  "ar": "عرفتها",
+  "en": "Knew it"
+ },
+ "plus.vocab.mastered": {
+  "ar": "متقنة",
+  "en": "Mastered"
+ },
+ "plus.vocab.masteredOne": {
+  "ar": "متقنة",
+  "en": "Mastered"
+ },
+ "plus.vocab.noMeaning": {
+  "ar": "لم تُضف معنى بعد",
+  "en": "No meaning added yet"
+ },
+ "plus.vocab.reveal": {
+  "ar": "أظهر المعنى",
+  "en": "Show meaning"
+ },
+ "plus.vocab.reviewDone": {
+  "ar": "أنهيت مراجعة %{n} كلمة",
+  "en": "Reviewed %{n} words"
+ },
+ "plus.vocab.startReview": {
+  "ar": "ابدأ المراجعة (%{n})",
+  "en": "Start review (%{n})"
+ },
+ "plus.vocab.title": {
+  "ar": "دفتر المفردات",
+  "en": "Vocabulary notebook"
+ },
+ "plus.vocab.wordLabel": {
+  "ar": "الكلمة",
+  "en": "Word"
+ },
+ "plus.vocab.words": {
+  "ar": "كلمة",
+  "en": "Words"
+ },
+ "plus.wrap.activeDays": {
+  "ar": "أيام القراءة",
+  "en": "Reading days"
+ },
+ "plus.wrap.archiveOpen": {
+  "ar": "الأرشيف مفتوح: %{n} شهرًا متاحًا للتصفح",
+  "en": "Archive open: %{n} months to browse"
+ },
+ "plus.wrap.bestDay": {
+  "ar": "أفضل يوم",
+  "en": "Best day"
+ },
+ "plus.wrap.bestMonth": {
+  "ar": "أفضل شهر",
+  "en": "Best month"
+ },
+ "plus.wrap.chapters": {
+  "ar": "فصول",
+  "en": "Chapters"
+ },
+ "plus.wrap.empty": {
+  "ar": "لا توجد قراءة مسجلة في هذا الشهر بعد",
+  "en": "No reading recorded this month yet"
+ },
+ "plus.wrap.goalDays": {
+  "ar": "أيام الهدف",
+  "en": "Goal days"
+ },
+ "plus.wrap.less": {
+  "ar": "أقل من الشهر السابق بـ %{d}",
+  "en": "%{d} less than last month"
+ },
+ "plus.wrap.longestRun": {
+  "ar": "أطول تتابع",
+  "en": "Longest run"
+ },
+ "plus.wrap.month": {
+  "ar": "الشهر",
+  "en": "Month"
+ },
+ "plus.wrap.monthTitle": {
+  "ar": "ملخص %{month} %{year}",
+  "en": "%{month} %{year} wrap-up"
+ },
+ "plus.wrap.monthlyChart": {
+  "ar": "الدقائق في كل شهر",
+  "en": "Minutes per month"
+ },
+ "plus.wrap.more": {
+  "ar": "أكثر من الشهر السابق بـ %{d}",
+  "en": "%{d} more than last month"
+ },
+ "plus.wrap.time": {
+  "ar": "وقت القراءة",
+  "en": "Reading time"
+ },
+ "plus.wrap.top": {
+  "ar": "أكثر ما قرأت",
+  "en": "Most read"
+ },
+ "plus.wrap.year": {
+  "ar": "السنة",
+  "en": "Year"
+ },
+ "plus.wrap.yearTitle": {
+  "ar": "ملخص سنة %{year}",
+  "en": "%{year} wrap-up"
+ },
+ "repo.allCategories": {
+  "ar": "كل التصنيفات",
+  "en": "All categories"
+ },
+ "repo.health": {
+  "ar": "حالة المصدر",
+  "en": "Source health"
+ },
+ "repo.needsUpdate": {
+  "ar": "يتطلب إصدارًا أحدث (%{version})",
+  "en": "Needs a newer version (%{version})"
+ },
+ "repo.sha": {
+  "ar": "موثّق",
+  "en": "Verified"
+ },
+ "repo.verified": {
+  "ar": "ملف موثّق ببصمة sha256",
+  "en": "Verified by sha256"
+ }
+}

@@ -1,0 +1,26 @@
+appId: app.sard.reader
+name: Sard 1.1 paywall (locked yearly wrap on the free tier) and feature directory
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/wrap"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-07-wrap
+- tapOn:
+    id: "sard-wrap-year"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: v11-08-paywall
+- back
+- waitForAnimationToEnd
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://features"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-09-features-directory
+- scroll
+- takeScreenshot: v11-10-features-directory-b

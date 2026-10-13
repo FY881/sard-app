@@ -1,0 +1,15 @@
+# Launches Sard and gets past LNReader's onboarding screen if it is shown.
+appId: app.sard.reader
+---
+- launchApp:
+    stopApp: true
+- extendedWaitUntil:
+    visible:
+      text: "(المكتبة|Library|مرحباً|Welcome|إكمال|Complete)"
+    timeout: 30000
+    optional: true
+- tapOn:
+    text: "(إكمال|Complete)"
+    optional: true
+- waitForAnimationToEnd:
+    timeout: 5000

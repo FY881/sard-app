@@ -1,0 +1,38 @@
+appId: app.sard.reader
+name: Sard 1.1 reader «سَرد+» tab (reader reached through reader mode, as in flow 02)
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://readermode?url=https%3A%2F%2Far.wikisource.org%2Fwiki%2F%25D8%25A7%25D9%2584%25D8%25A8%25D8%25AE%25D9%2584%25D8%25A7%25D8%25A1"
+- extendedWaitUntil:
+    notVisible:
+      text: "جارٍ جلب الصفحة…"
+    timeout: 30000
+    optional: true
+- tapOn:
+    text: "حفظ كفصل في المكتبة"
+    optional: true
+- extendedWaitUntil:
+    visible:
+      text: "إعدادات القارئ"
+    timeout: 20000
+    optional: true
+- runFlow:
+    when:
+      notVisible:
+        text: "إعدادات القارئ"
+    commands:
+      - tapOn:
+          point: "50%,50%"
+- tapOn:
+    text: "إعدادات القارئ"
+    optional: true
+- waitForAnimationToEnd
+- tapOn:
+    text: "سَرد\\+"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: v11-48-reader-plus-tab
+- scroll
+- takeScreenshot: v11-49-reader-plus-tab-b

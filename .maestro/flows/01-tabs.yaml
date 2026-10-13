@@ -1,0 +1,32 @@
+appId: app.sard.reader
+name: Bottom tabs and More screen
+---
+- runFlow: ../subflows/start.yaml
+- takeScreenshot: 01-library
+- tapOn:
+    text: "(التحديثات|Updates)"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 02-updates
+- tapOn:
+    text: "(السجل|History)"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 03-history
+- tapOn:
+    text: "(تصفح|Browse)"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 04-browse
+- tapOn:
+    text: "(المزيد|More)"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 05-more
+- scrollUntilVisible:
+    element:
+      text: "الذكاء الاصطناعي"
+    direction: DOWN
+    timeout: 8000
+    optional: true
+- takeScreenshot: 05b-more-sard-items

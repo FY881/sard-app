@@ -1,0 +1,14 @@
+appId: app.sard.reader
+name: Sard 1.1 look & feel (themes, ornaments, drop cap)
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/look"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-36-look-feel
+- scroll
+- takeScreenshot: v11-37-look-feel-b
+- scroll
+- takeScreenshot: v11-38-look-feel-c

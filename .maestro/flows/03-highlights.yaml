@@ -1,0 +1,11 @@
+appId: app.sard.reader
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://highlights"
+- waitForAnimationToEnd:
+    timeout: 10000
+- takeScreenshot: 15-highlights
+- scroll
+- takeScreenshot: 15-highlights-b

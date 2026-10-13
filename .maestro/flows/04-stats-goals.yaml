@@ -1,0 +1,12 @@
+appId: app.sard.reader
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://stats"
+- takeScreenshot: 16-stats
+- tapOn:
+    text: "الأهداف"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 17-stats-goals

@@ -1,0 +1,11 @@
+appId: app.sard.reader
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://ai"
+- waitForAnimationToEnd:
+    timeout: 10000
+- takeScreenshot: 18-ai-settings
+- scroll
+- takeScreenshot: 18-ai-settings-b

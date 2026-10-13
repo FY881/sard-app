@@ -1,0 +1,28 @@
+appId: app.sard.reader
+name: Sard 1.1 achievements, daily challenge, wrap-up
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://achievements"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-31-achievements
+- scrollUntilVisible:
+    element:
+      id: "sard-daily-challenge"
+    direction: DOWN
+    timeout: 6000
+    optional: true
+- takeScreenshot: v11-32-daily-challenge
+- scroll
+- takeScreenshot: v11-33-badges
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/wrap"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-34-wrap-month
+- scroll
+- takeScreenshot: v11-35-wrap-month-b

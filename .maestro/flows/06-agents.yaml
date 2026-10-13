@@ -1,0 +1,18 @@
+appId: app.sard.reader
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://agents"
+- takeScreenshot: 19-agents-hub
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://agents/chat"
+- takeScreenshot: 20-agent-chat
+- tapOn:
+    text: "رتّب مكتبتي"
+    optional: true
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: 20b-agent-chat-command

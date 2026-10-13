@@ -1,0 +1,44 @@
+appId: app.sard.reader
+name: Reader mode for a URL (البخلاء on Arabic Wikisource)
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://readermode?url=https%3A%2F%2Far.wikisource.org%2Fwiki%2F%25D8%25A7%25D9%2584%25D8%25A8%25D8%25AE%25D9%2584%25D8%25A7%25D8%25A1"
+- extendedWaitUntil:
+    notVisible:
+      text: "جارٍ جلب الصفحة…"
+    timeout: 30000
+    optional: true
+- takeScreenshot: 23-reader-mode-deeplink
+# same thing through the UI: More -> قراءة صفحة من رابط -> paste URL -> فتح
+- runFlow: ../subflows/start.yaml
+- tapOn:
+    text: "(المزيد|More)"
+    optional: true
+- scrollUntilVisible:
+    element:
+      text: "قراءة صفحة من رابط"
+    direction: DOWN
+    timeout: 8000
+    optional: true
+- tapOn:
+    text: "قراءة صفحة من رابط"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 23b-reader-mode-empty
+- tapOn:
+    text: "الصق رابط الصفحة هنا"
+    optional: true
+- inputText: "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D8%A8%D8%AE%D9%84%D8%A7%D8%A1"
+- hideKeyboard
+- tapOn:
+    text: "فتح"
+    optional: true
+- extendedWaitUntil:
+    notVisible:
+      text: "جارٍ جلب الصفحة…"
+    timeout: 30000
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: 23c-reader-mode-article

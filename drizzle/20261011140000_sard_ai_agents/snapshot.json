@@ -1,0 +1,1171 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "id": "a9428373-3ed9-46f0-88b3-dba7e2255dcf",
+  "prevIds": [
+    "2fada83f-d142-46d9-ba03-5ae1e232e3ce"
+  ],
+  "ddl": [
+    {
+      "name": "Category",
+      "entityType": "tables"
+    },
+    {
+      "name": "Chapter",
+      "entityType": "tables"
+    },
+    {
+      "name": "NovelCategory",
+      "entityType": "tables"
+    },
+    {
+      "name": "Novel",
+      "entityType": "tables"
+    },
+    {
+      "name": "Repository",
+      "entityType": "tables"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": true,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "Category"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "name",
+      "entityType": "columns",
+      "table": "Category"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "sort",
+      "entityType": "columns",
+      "table": "Category"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": true,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "novelId",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "path",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "name",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "releaseTime",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "false",
+      "generated": null,
+      "name": "bookmark",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "true",
+      "generated": null,
+      "name": "unread",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "readTime",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "false",
+      "generated": null,
+      "name": "isDownloaded",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "updatedTime",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "real",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "chapterNumber",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "'1'",
+      "generated": null,
+      "name": "page",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "0",
+      "generated": null,
+      "name": "position",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "progress",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "scanlator",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "0",
+      "generated": null,
+      "name": "timeSpent",
+      "entityType": "columns",
+      "table": "Chapter"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": true,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "NovelCategory"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "novelId",
+      "entityType": "columns",
+      "table": "NovelCategory"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "categoryId",
+      "entityType": "columns",
+      "table": "NovelCategory"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": true,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "path",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "pluginId",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "name",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "cover",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "summary",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "author",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "artist",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "'Unknown'",
+      "generated": null,
+      "name": "status",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "genres",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "false",
+      "generated": null,
+      "name": "inLibrary",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "false",
+      "generated": null,
+      "name": "isLocal",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "0",
+      "generated": null,
+      "name": "totalPages",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "0",
+      "generated": null,
+      "name": "chaptersDownloaded",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "0",
+      "generated": null,
+      "name": "chaptersUnread",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "0",
+      "generated": null,
+      "name": "totalChapters",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "lastReadAt",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "lastUpdatedAt",
+      "entityType": "columns",
+      "table": "Novel"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": true,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "Repository"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "url",
+      "entityType": "columns",
+      "table": "Repository"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": "true",
+      "generated": null,
+      "name": "enabled",
+      "entityType": "columns",
+      "table": "Repository"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "Category_pk",
+      "table": "Category",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "Chapter_pk",
+      "table": "Chapter",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "NovelCategory_pk",
+      "table": "NovelCategory",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "Novel_pk",
+      "table": "Novel",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "Repository_pk",
+      "table": "Repository",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        {
+          "value": "name",
+          "isExpression": false
+        }
+      ],
+      "isUnique": true,
+      "where": null,
+      "origin": "manual",
+      "name": "category_name_unique",
+      "entityType": "indexes",
+      "table": "Category"
+    },
+    {
+      "columns": [
+        {
+          "value": "sort",
+          "isExpression": false
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "origin": "manual",
+      "name": "category_sort_idx",
+      "entityType": "indexes",
+      "table": "Category"
+    },
+    {
+      "columns": [
+        {
+          "value": "novelId",
+          "isExpression": false
+        },
+        {
+          "value": "path",
+          "isExpression": false
+        }
+      ],
+      "isUnique": true,
+      "where": null,
+      "origin": "manual",
+      "name": "chapter_novel_path_unique",
+      "entityType": "indexes",
+      "table": "Chapter"
+    },
+    {
+      "columns": [
+        {
+          "value": "novelId",
+          "isExpression": false
+        },
+        {
+          "value": "position",
+          "isExpression": false
+        },
+        {
+          "value": "page",
+          "isExpression": false
+        },
+        {
+          "value": "id",
+          "isExpression": false
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "origin": "manual",
+      "name": "chapterNovelIdIndex",
+      "entityType": "indexes",
+      "table": "Chapter"
+    },
+    {
+      "columns": [
+        {
+          "value": "novelId",
+          "isExpression": false
+        },
+        {
+          "value": "categoryId",
+          "isExpression": false
+        }
+      ],
+      "isUnique": true,
+      "where": null,
+      "origin": "manual",
+      "name": "novel_category_unique",
+      "entityType": "indexes",
+      "table": "NovelCategory"
+    },
+    {
+      "columns": [
+        {
+          "value": "path",
+          "isExpression": false
+        },
+        {
+          "value": "pluginId",
+          "isExpression": false
+        }
+      ],
+      "isUnique": true,
+      "where": null,
+      "origin": "manual",
+      "name": "novel_path_plugin_unique",
+      "entityType": "indexes",
+      "table": "Novel"
+    },
+    {
+      "columns": [
+        {
+          "value": "pluginId",
+          "isExpression": false
+        },
+        {
+          "value": "path",
+          "isExpression": false
+        },
+        {
+          "value": "id",
+          "isExpression": false
+        },
+        {
+          "value": "inLibrary",
+          "isExpression": false
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "origin": "manual",
+      "name": "NovelIndex",
+      "entityType": "indexes",
+      "table": "Novel"
+    },
+    {
+      "columns": [
+        {
+          "value": "url",
+          "isExpression": false
+        }
+      ],
+      "isUnique": true,
+      "where": null,
+      "origin": "manual",
+      "name": "repository_url_unique",
+      "entityType": "indexes",
+      "table": "Repository"
+    },
+    {
+      "name": "SardAiCache",
+      "entityType": "tables"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": true,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "SardAiCache"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "novelId",
+      "entityType": "columns",
+      "table": "SardAiCache"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "kind",
+      "entityType": "columns",
+      "table": "SardAiCache"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "cacheKey",
+      "entityType": "columns",
+      "table": "SardAiCache"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "content",
+      "entityType": "columns",
+      "table": "SardAiCache"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "upToOrder",
+      "entityType": "columns",
+      "table": "SardAiCache"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "model",
+      "entityType": "columns",
+      "table": "SardAiCache"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "createdAt",
+      "entityType": "columns",
+      "table": "SardAiCache"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "SardAiCache_pk",
+      "table": "SardAiCache",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        {
+          "value": "novelId",
+          "isExpression": false
+        },
+        {
+          "value": "kind",
+          "isExpression": false
+        },
+        {
+          "value": "cacheKey",
+          "isExpression": false
+        }
+      ],
+      "isUnique": true,
+      "where": null,
+      "origin": "manual",
+      "name": "sard_ai_cache_unique",
+      "entityType": "indexes",
+      "table": "SardAiCache"
+    },
+    {
+      "name": "SardGlossaryEntry",
+      "entityType": "tables"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": true,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "SardGlossaryEntry"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "novelId",
+      "entityType": "columns",
+      "table": "SardGlossaryEntry"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "name",
+      "entityType": "columns",
+      "table": "SardGlossaryEntry"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "normalizedName",
+      "entityType": "columns",
+      "table": "SardGlossaryEntry"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": "'term'",
+      "generated": null,
+      "name": "category",
+      "entityType": "columns",
+      "table": "SardGlossaryEntry"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": "'[]'",
+      "generated": null,
+      "name": "aliases",
+      "entityType": "columns",
+      "table": "SardGlossaryEntry"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": "'[]'",
+      "generated": null,
+      "name": "history",
+      "entityType": "columns",
+      "table": "SardGlossaryEntry"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": "0",
+      "generated": null,
+      "name": "firstSeenOrder",
+      "entityType": "columns",
+      "table": "SardGlossaryEntry"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "firstSeenChapterName",
+      "entityType": "columns",
+      "table": "SardGlossaryEntry"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": "0",
+      "generated": null,
+      "name": "lastSeenOrder",
+      "entityType": "columns",
+      "table": "SardGlossaryEntry"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": "false",
+      "generated": null,
+      "name": "pinned",
+      "entityType": "columns",
+      "table": "SardGlossaryEntry"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "updatedAt",
+      "entityType": "columns",
+      "table": "SardGlossaryEntry"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "SardGlossaryEntry_pk",
+      "table": "SardGlossaryEntry",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        {
+          "value": "novelId",
+          "isExpression": false
+        },
+        {
+          "value": "normalizedName",
+          "isExpression": false
+        }
+      ],
+      "isUnique": true,
+      "where": null,
+      "origin": "manual",
+      "name": "sard_glossary_novel_name_unique",
+      "entityType": "indexes",
+      "table": "SardGlossaryEntry"
+    },
+    {
+      "name": "SardNovelAgent",
+      "entityType": "tables"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "novelId",
+      "entityType": "columns",
+      "table": "SardNovelAgent"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": "false",
+      "generated": null,
+      "name": "autoDownload",
+      "entityType": "columns",
+      "table": "SardNovelAgent"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": "5",
+      "generated": null,
+      "name": "autoDownloadCount",
+      "entityType": "columns",
+      "table": "SardNovelAgent"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": "true",
+      "generated": null,
+      "name": "wifiOnly",
+      "entityType": "columns",
+      "table": "SardNovelAgent"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "lastRunAt",
+      "entityType": "columns",
+      "table": "SardNovelAgent"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "lastQueuedCount",
+      "entityType": "columns",
+      "table": "SardNovelAgent"
+    },
+    {
+      "columns": [
+        "novelId"
+      ],
+      "nameExplicit": false,
+      "name": "SardNovelAgent_pk",
+      "table": "SardNovelAgent",
+      "entityType": "pks"
+    },
+    {
+      "name": "SardAgentLog",
+      "entityType": "tables"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": true,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "SardAgentLog"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "agent",
+      "entityType": "columns",
+      "table": "SardAgentLog"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "action",
+      "entityType": "columns",
+      "table": "SardAgentLog"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "detail",
+      "entityType": "columns",
+      "table": "SardAgentLog"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "novelId",
+      "entityType": "columns",
+      "table": "SardAgentLog"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "createdAt",
+      "entityType": "columns",
+      "table": "SardAgentLog"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "SardAgentLog_pk",
+      "table": "SardAgentLog",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        {
+          "value": "createdAt",
+          "isExpression": false
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "origin": "manual",
+      "name": "sard_agent_log_created_idx",
+      "entityType": "indexes",
+      "table": "SardAgentLog"
+    },
+    {
+      "name": "SardChatMessage",
+      "entityType": "tables"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": true,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "SardChatMessage"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "thread",
+      "entityType": "columns",
+      "table": "SardChatMessage"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "role",
+      "entityType": "columns",
+      "table": "SardChatMessage"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "content",
+      "entityType": "columns",
+      "table": "SardChatMessage"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "payload",
+      "entityType": "columns",
+      "table": "SardChatMessage"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "createdAt",
+      "entityType": "columns",
+      "table": "SardChatMessage"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "SardChatMessage_pk",
+      "table": "SardChatMessage",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        {
+          "value": "thread",
+          "isExpression": false
+        },
+        {
+          "value": "createdAt",
+          "isExpression": false
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "origin": "manual",
+      "name": "sard_chat_thread_idx",
+      "entityType": "indexes",
+      "table": "SardChatMessage"
+    }
+  ],
+  "renames": []
+}

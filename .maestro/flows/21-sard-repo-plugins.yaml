@@ -1,0 +1,40 @@
+appId: app.sard.reader
+name: Sard repository (the only source ever added) -> plugin list with sard badges
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://repo/add?url=https%3A%2F%2Fraw.githubusercontent.com%2FFY881%2Fsard-plugins%2Fmain%2F.dist%2Fplugins.min.json"
+- extendedWaitUntil:
+    visible:
+      text: "المستودع صالح.*"
+    timeout: 20000
+    optional: true
+- takeScreenshot: v11-50-add-sard-repo
+- tapOn:
+    text: "أفهم ذلك وأثق بهذا المستودع"
+    optional: true
+- takeScreenshot: v11-51-add-sard-repo-trusted
+- tapOn:
+    text: "إضافة"
+    index: 0
+    optional: true
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-52-repositories-with-sard
+- runFlow: ../subflows/start.yaml
+- tapOn:
+    text: "(تصفح|Browse)"
+    optional: true
+- waitForAnimationToEnd
+- tapOn:
+    text: "الإضافات"
+    optional: true
+- extendedWaitUntil:
+    visible:
+      text: ".*ويكي مصدر.*"
+    timeout: 20000
+    optional: true
+- takeScreenshot: v11-53-plugins-sard-badges
+- scroll
+- takeScreenshot: v11-54-plugins-sard-badges-b

@@ -1,0 +1,49 @@
+appId: app.sard.reader
+name: Sard 1.1 privacy - set a PIN, then always remove it so later flows are not locked
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://plus/privacy"
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-39-privacy
+- tapOn:
+    id: "sard-set-pin"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: v11-40-pin-setup
+- tapOn: { id: "sard-pin-1", optional: true }
+- tapOn: { id: "sard-pin-2", optional: true }
+- tapOn: { id: "sard-pin-3", optional: true }
+- tapOn: { id: "sard-pin-4", optional: true }
+- tapOn: { id: "sard-pin-ok", optional: true }
+- waitForAnimationToEnd
+- takeScreenshot: v11-41-pin-confirm
+- tapOn: { id: "sard-pin-1", optional: true }
+- tapOn: { id: "sard-pin-2", optional: true }
+- tapOn: { id: "sard-pin-3", optional: true }
+- tapOn: { id: "sard-pin-4", optional: true }
+- tapOn: { id: "sard-pin-ok", optional: true }
+- waitForAnimationToEnd
+- takeScreenshot: v11-42-privacy-pin-set
+# Always remove the PIN again: «إيقاف القفل وحذف الرمز» asks for the PIN first.
+- scrollUntilVisible:
+    element:
+      id: "sard-remove-pin"
+    direction: DOWN
+    timeout: 6000
+    optional: true
+- tapOn:
+    id: "sard-remove-pin"
+    optional: true
+- waitForAnimationToEnd
+- tapOn: { id: "sard-pin-1", optional: true }
+- tapOn: { id: "sard-pin-2", optional: true }
+- tapOn: { id: "sard-pin-3", optional: true }
+- tapOn: { id: "sard-pin-4", optional: true }
+- tapOn: { id: "sard-pin-ok", optional: true }
+- waitForAnimationToEnd
+- takeScreenshot: v11-43-privacy-pin-removed
+- scroll
+- takeScreenshot: v11-44-privacy-b

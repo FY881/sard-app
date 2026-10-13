@@ -1,0 +1,11 @@
+appId: app.sard.reader
+---
+- runFlow:
+    file: ../subflows/deeplink.yaml
+    env:
+      LINK: "sard://recommendations"
+- waitForAnimationToEnd:
+    timeout: 10000
+- takeScreenshot: 22-recommendations
+- scroll
+- takeScreenshot: 22-recommendations-b

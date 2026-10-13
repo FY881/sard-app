@@ -1,0 +1,73 @@
+appId: app.sard.reader
+name: Sard 1.1 «سَرد+» hub and the eight category screens
+---
+- runFlow: ../subflows/start.yaml
+- tapOn:
+    text: "(المزيد|More)"
+    optional: true
+- waitForAnimationToEnd
+- tapOn:
+    id: "more-sard-plus"
+    optional: true
+- waitForAnimationToEnd:
+    timeout: 8000
+- takeScreenshot: v11-11-plus-hub
+- scroll
+- takeScreenshot: v11-12-plus-hub-categories
+- tapOn:
+    id: "sard-plus-cat-reading"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: v11-13-reading-tools
+- scroll
+- takeScreenshot: v11-13b-reading-tools
+- back
+- tapOn:
+    id: "sard-plus-cat-library"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: v11-14-library-tools
+- back
+- waitForAnimationToEnd
+- tapOn:
+    id: "sard-plus-cat-offline"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: v11-15-storage
+- back
+- waitForAnimationToEnd
+- tapOn:
+    id: "sard-plus-cat-motivation"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: v11-16-achievements
+- back
+- waitForAnimationToEnd
+- tapOn:
+    id: "sard-plus-cat-custom"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: v11-17-look-feel
+- back
+- waitForAnimationToEnd
+- tapOn:
+    id: "sard-plus-cat-localAi"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: v11-18-local-ai
+- back
+- waitForAnimationToEnd
+- tapOn:
+    id: "sard-plus-cat-privacy"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: v11-19-privacy
+- back
+- waitForAnimationToEnd
+- tapOn:
+    id: "sard-plus-cat-tools"
+    optional: true
+- waitForAnimationToEnd
+- takeScreenshot: v11-20-backup-tools
+- back
+- waitForAnimationToEnd
