@@ -9,7 +9,7 @@ import { AppState, Modal, Pressable, StyleSheet, Text, View } from 'react-native
 import MaterialCommunityIcons from '@react-native-vector-icons/material-design-icons';
 import * as ScreenCapture from 'expo-screen-capture';
 import { useTheme } from '@hooks/persisted';
-import { lockStore } from '../store';
+import { lockStore, useMmkvState } from '../store';
 import { lockoutMs, shouldLockOnResume } from '../logic/lock';
 import {
   authenticateBiometric,
@@ -176,7 +176,7 @@ const UnlockPad = ({ subtitle, onSuccess, onCancel, testID }: { subtitle?: strin
 
 export const AppLockGate = () => {
   const { locked, prompt } = useLockSession();
-  const [lock] = lockStore.use();
+  const [lock] = useMmkvState(lockStore);
   const backgroundAt = useRef<number | null>(null);
 
   // Lock at startup.

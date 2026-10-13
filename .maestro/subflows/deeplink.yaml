@@ -5,3 +5,4 @@ appId: app.sard.reader
 - openLink: ${LINK}
 - waitForAnimationToEnd:
     timeout: 8000
+- runFlow: healthy.yaml

@@ -5,8 +5,10 @@ appId: app.sard.reader
     env:
       LINK: "sard://stats"
 - takeScreenshot: 16-stats
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     text: "الأهداف"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: 17-stats-goals
+- runFlow: ../subflows/healthy.yaml

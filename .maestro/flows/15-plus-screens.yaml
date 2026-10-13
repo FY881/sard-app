@@ -8,8 +8,10 @@ name: Sard 1.1 category screens in depth (deep links)
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-21-reading-tools
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-21-reading-tools-b
+- runFlow: ../subflows/healthy.yaml
 - runFlow:
     file: ../subflows/deeplink.yaml
     env:
@@ -17,8 +19,10 @@ name: Sard 1.1 category screens in depth (deep links)
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-22-bookmarks
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-22-bookmarks-b
+- runFlow: ../subflows/healthy.yaml
 - runFlow:
     file: ../subflows/deeplink.yaml
     env:
@@ -26,8 +30,10 @@ name: Sard 1.1 category screens in depth (deep links)
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-23-vocabulary
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-23-vocabulary-b
+- runFlow: ../subflows/healthy.yaml
 - runFlow:
     file: ../subflows/deeplink.yaml
     env:
@@ -35,8 +41,10 @@ name: Sard 1.1 category screens in depth (deep links)
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-24-library-tools
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-24-library-tools-b
+- runFlow: ../subflows/healthy.yaml
 - runFlow:
     file: ../subflows/deeplink.yaml
     env:
@@ -44,8 +52,10 @@ name: Sard 1.1 category screens in depth (deep links)
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-25-storage
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-25-storage-b
+- runFlow: ../subflows/healthy.yaml
 - runFlow:
     file: ../subflows/deeplink.yaml
     env:
@@ -53,8 +63,10 @@ name: Sard 1.1 category screens in depth (deep links)
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-26-look-feel
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-26-look-feel-b
+- runFlow: ../subflows/healthy.yaml
 - runFlow:
     file: ../subflows/deeplink.yaml
     env:
@@ -62,8 +74,10 @@ name: Sard 1.1 category screens in depth (deep links)
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-27-local-ai
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-27-local-ai-b
+- runFlow: ../subflows/healthy.yaml
 - runFlow:
     file: ../subflows/deeplink.yaml
     env:
@@ -71,8 +85,10 @@ name: Sard 1.1 category screens in depth (deep links)
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-28-backup-tools
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-28-backup-tools-b
+- runFlow: ../subflows/healthy.yaml
 - runFlow:
     file: ../subflows/deeplink.yaml
     env:
@@ -80,8 +96,10 @@ name: Sard 1.1 category screens in depth (deep links)
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-29-diagnostics
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-29-diagnostics-b
+- runFlow: ../subflows/healthy.yaml
 - runFlow:
     file: ../subflows/deeplink.yaml
     env:
@@ -89,5 +107,7 @@ name: Sard 1.1 category screens in depth (deep links)
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-30-changelog
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-30-changelog-b
+- runFlow: ../subflows/healthy.yaml

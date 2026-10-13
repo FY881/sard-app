@@ -8,6 +8,7 @@ name: Sard 1.1 achievements, daily challenge, wrap-up
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-31-achievements
+- runFlow: ../subflows/healthy.yaml
 - scrollUntilVisible:
     element:
       id: "sard-daily-challenge"
@@ -15,8 +16,10 @@ name: Sard 1.1 achievements, daily challenge, wrap-up
     timeout: 6000
     optional: true
 - takeScreenshot: v11-32-daily-challenge
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-33-badges
+- runFlow: ../subflows/healthy.yaml
 - runFlow:
     file: ../subflows/deeplink.yaml
     env:
@@ -24,5 +27,7 @@ name: Sard 1.1 achievements, daily challenge, wrap-up
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-34-wrap-month
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-35-wrap-month-b
+- runFlow: ../subflows/healthy.yaml

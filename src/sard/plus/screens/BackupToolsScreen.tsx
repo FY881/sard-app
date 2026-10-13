@@ -16,7 +16,7 @@ import { isArabicUi, num, t, tr } from '../../i18n';
 import { Card, Muted, Row, Screen, SectionTitle, SwitchRow, TierBadge } from '../ui';
 import { ChoiceDialog, Stepper, TextPromptDialog } from '../components/dialogs';
 import { useAsync } from '../hooks';
-import { autoBackupStore } from '../store';
+import { autoBackupStore, useMmkvState } from '../store';
 import { exportNotesMarkdown, isEncryptedText, listBackupFiles, parseBackupText, pickBackupText, restoreBackup, runAutoBackupIfDue, shareFile, writeBackupFile } from '../backup';
 import NativeFile from '@modules/native-file';
 
@@ -33,7 +33,7 @@ const BackupToolsScreen = () => {
   const navigation = useNavigation<any>();
   const enc = useEntitlement('privacy.encryptedBackup');
   const auto = useEntitlement('tools.autoBackup');
-  const [autoS, setAutoS] = autoBackupStore.use();
+  const [autoS, setAutoS] = useMmkvState(autoBackupStore);
   const [busy, setBusy] = useState<string | null>(null);
   const [pwdFor, setPwdFor] = useState<null | { mode: 'export' } | { mode: 'import'; text: string }>(null);
   const [intervalPick, setIntervalPick] = useState(false);

@@ -42,7 +42,7 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({
     `${fallbackGetString(
       'aboutScreen.version',
       'Version',
-    )}: ${version} (${DeviceInfo.getBuildNumber()})`,
+    )}: ${version} (r${DeviceInfo.getBuildNumber()})`,
     BUILD_TYPE || 'Custom build',
     GIT_HASH,
   ]

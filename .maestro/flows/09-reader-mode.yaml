@@ -11,6 +11,7 @@ name: Reader mode for a URL (البخلاء on Arabic Wikisource)
     timeout: 30000
     optional: true
 - takeScreenshot: 23-reader-mode-deeplink
+- runFlow: ../subflows/healthy.yaml
 # same thing through the UI: More -> قراءة صفحة من رابط -> paste URL -> فتح
 - runFlow: ../subflows/start.yaml
 - tapOn:
@@ -27,6 +28,7 @@ name: Reader mode for a URL (البخلاء on Arabic Wikisource)
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: 23b-reader-mode-empty
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     text: "الصق رابط الصفحة هنا"
     optional: true
@@ -42,3 +44,4 @@ name: Reader mode for a URL (البخلاء on Arabic Wikisource)
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: 23c-reader-mode-article
+- runFlow: ../subflows/healthy.yaml

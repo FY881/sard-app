@@ -18,7 +18,7 @@ import { ChoiceDialog, TextPromptDialog } from '../components/dialogs';
 import { useAsync } from '../hooks';
 import { loadLibraryNovels, type LibraryNovel } from '../../agents/library';
 import { createTag, deleteTag, getAllNovelMeta, listTags, renameTag, setHidden, setNovelMeta, setNovelTags, tagNovels } from '../db';
-import { smartFiltersStore, upNextStore } from '../store';
+import { smartFiltersStore, upNextStore, useMmkvState } from '../store';
 import {
   READING_STATUSES,
   STATUS_LABELS,
@@ -62,8 +62,8 @@ const LibraryToolsScreen = () => {
   const metas = data?.metas ?? new Map<number, NovelMeta>();
   const tags = data?.tags ?? [];
 
-  const [filters] = smartFiltersStore.use();
-  const [queue, setQueue] = upNextStore.use();
+  const [filters] = useMmkvState(smartFiltersStore);
+  const [queue, setQueue] = useMmkvState(upNextStore);
   const filterGate = useEntitlement('library.smartFilters', filters.length);
 
   const [mode, setMode] = useState<SurpriseMode>('unread');

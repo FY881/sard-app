@@ -14,6 +14,7 @@ name: Reader mode URL -> save as chapter -> reader sheet tabs -> novel export/AI
     timeout: 30000
     optional: true
 - takeScreenshot: 06-reader-mode-article
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     text: "حفظ كفصل في المكتبة"
     optional: true
@@ -23,6 +24,7 @@ name: Reader mode URL -> save as chapter -> reader sheet tabs -> novel export/AI
     timeout: 20000
     optional: true
 - takeScreenshot: 09-reader
+- runFlow: ../subflows/healthy.yaml
 - runFlow:
     when:
       notVisible:
@@ -35,11 +37,13 @@ name: Reader mode URL -> save as chapter -> reader sheet tabs -> novel export/AI
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: 10-reader-sheet
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     text: "العربية"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: 11-reader-arabic
+- runFlow: ../subflows/healthy.yaml
 - scrollUntilVisible:
     element:
       text: "وضع التركيز"
@@ -47,12 +51,15 @@ name: Reader mode URL -> save as chapter -> reader sheet tabs -> novel export/AI
     timeout: 8000
     optional: true
 - takeScreenshot: 12-reader-focus-mode
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     text: "TTS"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: 13-reader-tts
+- runFlow: ../subflows/healthy.yaml
 - back
+- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
 - runFlow:
     when:
@@ -66,6 +73,7 @@ name: Reader mode URL -> save as chapter -> reader sheet tabs -> novel export/AI
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: 14-reader-ai-sheet
+- runFlow: ../subflows/healthy.yaml
 # the saved local novel from the library: novel screen, export dialog, AI
 - runFlow: ../subflows/start.yaml
 - tapOn:
@@ -77,15 +85,19 @@ name: Reader mode URL -> save as chapter -> reader sheet tabs -> novel export/AI
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: 07-novel
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     text: "تصدير"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: 08-export-dialog
+- runFlow: ../subflows/healthy.yaml
 - back
+- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
 - tapOn:
     text: "الذكاء الاصطناعي"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: 08b-novel-ai
+- runFlow: ../subflows/healthy.yaml

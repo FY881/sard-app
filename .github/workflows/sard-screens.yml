@@ -56,3 +56,10 @@ jobs:
           git add -A
           git commit -qm "Screens from run ${{ github.event.inputs.run_id || github.event.workflow_run.id }}" || exit 0
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" screens
+      - name: Fail when the app crashed or closed during the flows
+        if: always()
+        run: |
+          if [ -s shots/flow-failures.txt ]; then
+            echo "::error::Sard crashed, showed the error screen, or left the foreground:"; cat shots/flow-failures.txt; exit 1
+          fi
+          if [ "${{ steps.emu.outcome }}" != "success" ]; then echo "::error::emulator step: ${{ steps.emu.outcome }}"; exit 1; fi

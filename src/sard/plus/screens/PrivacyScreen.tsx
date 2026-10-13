@@ -15,7 +15,7 @@ import { num, t, tr } from '../../i18n';
 import { Card, Muted, Row, Screen, SectionTitle, SwitchRow, TierBadge } from '../ui';
 import { ChoiceDialog } from '../components/dialogs';
 import { useAsync } from '../hooks';
-import { hiddenStore, lockStore } from '../store';
+import { hiddenStore, lockStore, useMmkvState } from '../store';
 import { LOCK_TIMEOUTS } from '../logic/lock';
 import { PinPad } from '../lock/AppLockGate';
 import { biometricAvailable, clearLock, requestUnlock, setHiddenRevealed, setPin, useLockSession } from '../lock/lockSession';
@@ -29,8 +29,8 @@ const timeoutLabel = (ms: number) =>
 const PrivacyScreen = () => {
   const theme = useTheme();
   const navigation = useNavigation<any>();
-  const [lock, setLock] = lockStore.use();
-  const [hidden] = hiddenStore.use();
+  const [lock, setLock] = useMmkvState(lockStore);
+  const [hidden] = useMmkvState(hiddenStore);
   const revealed = useLockSession(s => s.hiddenRevealed);
   const shelf = useEntitlement('privacy.hiddenShelf');
   const [pinStep, setPinStep] = useState<null | { first?: string }>(null);

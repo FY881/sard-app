@@ -19,5 +19,7 @@ appId: app.sard.reader
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: 27-settings-appearance
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: 27b-settings-appearance
+- runFlow: ../subflows/healthy.yaml

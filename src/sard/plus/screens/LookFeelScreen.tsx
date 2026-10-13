@@ -11,7 +11,7 @@ import { canUse, requireFeature, useMembership } from '../../membership/service'
 import { FEATURES } from '../../membership/features';
 import { t, tr } from '../../i18n';
 import { Muted, Row, Screen, SectionTitle, SwitchRow, TierBadge } from '../ui';
-import { plusReaderSettings } from '../store';
+import { plusReaderSettings, useMmkvState } from '../store';
 import { PAPER_TEXTURES, SARD_THEMES, type SardReaderTheme } from '../logic/themes';
 import { MemberBadge } from '../../membership/components/MemberBadge';
 
@@ -27,7 +27,7 @@ const LookFeelScreen = () => {
   const theme = useTheme();
   const navigation = useNavigation<any>();
   const m = useMembership();
-  const [s] = plusReaderSettings.use();
+  const [s] = useMmkvState(plusReaderSettings);
   const look = s.look;
   const setLook = (p: Partial<typeof look>) => plusReaderSettings.update(x => ({ ...x, look: { ...x.look, ...p } }));
 

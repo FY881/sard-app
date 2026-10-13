@@ -7,12 +7,14 @@ name: Sard 1.1 membership hub, comparison table, activate-code dialog
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-01-more-membership-rows
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     id: "more-membership"
     optional: true
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-02-membership-hub
+- runFlow: ../subflows/healthy.yaml
 - scrollUntilVisible:
     element:
       id: "sard-tier-table"
@@ -20,8 +22,10 @@ name: Sard 1.1 membership hub, comparison table, activate-code dialog
     timeout: 8000
     optional: true
 - takeScreenshot: v11-03-membership-tiers
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-04-membership-benefits
+- runFlow: ../subflows/healthy.yaml
 - runFlow:
     file: ../subflows/deeplink.yaml
     env:
@@ -33,9 +37,12 @@ name: Sard 1.1 membership hub, comparison table, activate-code dialog
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-05-activate-code-dialog
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     id: "sard-code-input"
     optional: true
 - inputText: "SARD-TEST-CODE"
 - takeScreenshot: v11-06-activate-code-typed
+- runFlow: ../subflows/healthy.yaml
 - back
+- runFlow: ../subflows/healthy.yaml

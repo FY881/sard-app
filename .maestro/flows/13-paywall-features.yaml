@@ -8,12 +8,15 @@ name: Sard 1.1 paywall (locked yearly wrap on the free tier) and feature directo
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-07-wrap
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     id: "sard-wrap-year"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-08-paywall
+- runFlow: ../subflows/healthy.yaml
 - back
+- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
 - runFlow:
     file: ../subflows/deeplink.yaml
@@ -22,5 +25,7 @@ name: Sard 1.1 paywall (locked yearly wrap on the free tier) and feature directo
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-09-features-directory
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-10-features-directory-b
+- runFlow: ../subflows/healthy.yaml

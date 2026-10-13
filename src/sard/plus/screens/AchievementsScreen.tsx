@@ -18,7 +18,7 @@ import { addDays, toDayKey } from '../../reader/streaks';
 import { Card, Muted, ProgressBar, Row, Screen, SectionTitle, StatTile, SwitchRow, TierBadge, TileRow, type IconName } from '../ui';
 import { useAsync } from '../hooks';
 import { loadMotivation } from '../motivationState';
-import { challengesStore, quoteStore } from '../store';
+import { challengesStore, quoteStore, useMmkvState } from '../store';
 import type { CustomGoalKind } from '../logic/motivation';
 
 const KINDS: CustomGoalKind[] = ['chapters', 'minutes', 'novels'];
@@ -29,7 +29,7 @@ const AchievementsScreen = () => {
   const { data, reload } = useAsync(() => loadMotivation({ toast: true }), []);
   const customGate = useEntitlement('motivation.customChallenges', data?.custom.filter(c => !c.p.done && !c.p.expired).length ?? 0);
   const freezeGate = useEntitlement('motivation.streakFreeze');
-  const [quote, setQuote] = quoteStore.use();
+  const [quote, setQuote] = useMmkvState(quoteStore);
   const [creating, setCreating] = useState(false);
 
   if (!data) {

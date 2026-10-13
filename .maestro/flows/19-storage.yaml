@@ -8,7 +8,10 @@ name: Sard 1.1 storage manager and download scheduler
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-45-storage
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-46-storage-b
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-47-storage-c
+- runFlow: ../subflows/healthy.yaml

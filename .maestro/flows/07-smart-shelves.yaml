@@ -7,5 +7,7 @@ appId: app.sard.reader
 - waitForAnimationToEnd:
     timeout: 10000
 - takeScreenshot: 21-smart-shelves
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: 21-smart-shelves-b
+- runFlow: ../subflows/healthy.yaml

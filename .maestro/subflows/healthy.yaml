@@ -1,0 +1,13 @@
+# Fails the flow when the app crashed: the error boundary «حدث خطأ غير متوقع»
+# is on screen, or Sard is no longer in the foreground (Android launcher shown).
+# Run after every navigation / screenshot.
+appId: app.sard.reader
+---
+- assertNotVisible:
+    text: "حدث خطأ غير متوقع"
+- assertNotVisible:
+    text: "An Unexpected Error Occurred"
+- assertNotVisible:
+    id: "(com\\.android\\.launcher3|com\\.google\\.android\\.apps\\.nexuslauncher):id/.*"
+- assertNotVisible:
+    id: "com\\.android\\.systemui:id/.*(aerr|crash).*"

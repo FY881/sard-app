@@ -3,26 +3,31 @@ name: Bottom tabs and More screen
 ---
 - runFlow: ../subflows/start.yaml
 - takeScreenshot: 01-library
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     text: "(التحديثات|Updates)"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: 02-updates
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     text: "(السجل|History)"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: 03-history
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     text: "(تصفح|Browse)"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: 04-browse
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     text: "(المزيد|More)"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: 05-more
+- runFlow: ../subflows/healthy.yaml
 - scrollUntilVisible:
     element:
       text: "الذكاء الاصطناعي"
@@ -30,3 +35,4 @@ name: Bottom tabs and More screen
     timeout: 8000
     optional: true
 - takeScreenshot: 05b-more-sard-items
+- runFlow: ../subflows/healthy.yaml

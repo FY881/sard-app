@@ -8,7 +8,7 @@ import { canUse } from '../../membership/service';
 import { t } from '../../i18n';
 import { listHighlights, type SardHighlightRow } from '../../reader/db';
 import { toDayKey } from '../../reader/streaks';
-import { quoteStore } from '../store';
+import { quoteStore, useMmkvState } from '../store';
 
 const hash = (s: string) => {
   let h = 7;
@@ -26,7 +26,7 @@ export const pickQuote = (list: Pick<SardHighlightRow, 'id' | 'text'>[], day: st
 export const QuoteOfDayCard = () => {
   const theme = useTheme();
   const navigation = useNavigation<any>();
-  const [q, setQ] = quoteStore.use();
+  const [q, setQ] = useMmkvState(quoteStore);
   const [quote, setQuote] = useState<SardHighlightRow | undefined>();
   const today = toDayKey(new Date());
   const hidden = q.hiddenDay === today || q.hiddenDay === 'never' || !canUse('motivation.quoteOfDay').allowed;

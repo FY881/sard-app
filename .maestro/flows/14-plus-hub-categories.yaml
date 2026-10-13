@@ -12,62 +12,81 @@ name: Sard 1.1 «سَرد+» hub and the eight category screens
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-11-plus-hub
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-12-plus-hub-categories
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     id: "sard-plus-cat-reading"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-13-reading-tools
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-13b-reading-tools
+- runFlow: ../subflows/healthy.yaml
 - back
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     id: "sard-plus-cat-library"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-14-library-tools
+- runFlow: ../subflows/healthy.yaml
 - back
+- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
 - tapOn:
     id: "sard-plus-cat-offline"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-15-storage
+- runFlow: ../subflows/healthy.yaml
 - back
+- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
 - tapOn:
     id: "sard-plus-cat-motivation"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-16-achievements
+- runFlow: ../subflows/healthy.yaml
 - back
+- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
 - tapOn:
     id: "sard-plus-cat-custom"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-17-look-feel
+- runFlow: ../subflows/healthy.yaml
 - back
+- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
 - tapOn:
     id: "sard-plus-cat-localAi"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-18-local-ai
+- runFlow: ../subflows/healthy.yaml
 - back
+- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
 - tapOn:
     id: "sard-plus-cat-privacy"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-19-privacy
+- runFlow: ../subflows/healthy.yaml
 - back
+- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd
 - tapOn:
     id: "sard-plus-cat-tools"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-20-backup-tools
+- runFlow: ../subflows/healthy.yaml
 - back
+- runFlow: ../subflows/healthy.yaml
 - waitForAnimationToEnd

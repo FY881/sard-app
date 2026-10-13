@@ -23,7 +23,7 @@ import {
   QueuedBackgroundTask,
 } from '@services/backgroundTasks';
 import { useMMKVObject } from 'react-native-mmkv';
-import { hiddenStore } from '../../../sard/plus/store';
+import { hiddenStore, useMmkvState } from '../../../sard/plus/store';
 import { useLockSession } from '../../../sard/plus/lock/lockSession';
 import { useEntitlement } from '../../../sard/membership/service';
 
@@ -303,7 +303,7 @@ export const useLibrary = (): UseLibraryReturnType => {
   }, [getLibrary, restoreTasksCount]);
 
   // Sard 1.1 hidden shelf (Plus): hidden novels only show after unlocking.
-  const [hiddenIds] = hiddenStore.use();
+  const [hiddenIds] = useMmkvState(hiddenStore);
   const hiddenRevealed = useLockSession(s => s.hiddenRevealed);
   const hiddenShelf = useEntitlement('privacy.hiddenShelf');
   const visibleLibrary = useMemo(() => {

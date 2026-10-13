@@ -11,10 +11,12 @@ name: Sard repository (the only source ever added) -> plugin list with sard badg
     timeout: 20000
     optional: true
 - takeScreenshot: v11-50-add-sard-repo
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     text: "أفهم ذلك وأثق بهذا المستودع"
     optional: true
 - takeScreenshot: v11-51-add-sard-repo-trusted
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     text: "إضافة"
     index: 0
@@ -22,6 +24,7 @@ name: Sard repository (the only source ever added) -> plugin list with sard badg
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-52-repositories-with-sard
+- runFlow: ../subflows/healthy.yaml
 - runFlow: ../subflows/start.yaml
 - tapOn:
     text: "(تصفح|Browse)"
@@ -36,5 +39,7 @@ name: Sard repository (the only source ever added) -> plugin list with sard badg
     timeout: 20000
     optional: true
 - takeScreenshot: v11-53-plugins-sard-badges
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-54-plugins-sard-badges-b
+- runFlow: ../subflows/healthy.yaml

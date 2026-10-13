@@ -78,7 +78,7 @@ describe('ErrorFallback', () => {
     render(<ErrorFallback error={new Error('boom')} resetError={jest.fn()} />);
 
     expect(
-      screen.getByText(`${getString('aboutScreen.version')}: ${version} (42) · Debug · abc123`),
+      screen.getByText(`${getString('aboutScreen.version')}: ${version} (r42) · Debug · abc123`),
     ).toBeTruthy();
   });
 

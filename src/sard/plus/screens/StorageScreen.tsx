@@ -16,7 +16,7 @@ import { ChoiceDialog, Stepper, TextPromptDialog } from '../components/dialogs';
 import { useAsync } from '../hooks';
 import { checkDownloadIntegrity, deleteAllDownloadsOfNovel, deleteReadDownloads, downloadByTag, downloadedCount, getStorageByNovel, runSmartCleanup } from '../data';
 import { listTags } from '../db';
-import { cleanupStore, schedulerStore } from '../store';
+import { cleanupStore, schedulerStore, useMmkvState } from '../store';
 import { formatBytes } from '../logic/offline';
 import { parseHm } from '../logic/nightSchedule';
 
@@ -27,8 +27,8 @@ const StorageScreen = () => {
     const [storage, count, tags] = await Promise.all([getStorageByNovel(), downloadedCount(), listTags()]);
     return { ...storage, count, tags };
   }, []);
-  const [sched, setSched] = schedulerStore.use();
-  const [clean, setClean] = cleanupStore.use();
+  const [sched, setSched] = useMmkvState(schedulerStore);
+  const [clean, setClean] = useMmkvState(cleanupStore);
   const schedGate = useEntitlement('offline.scheduler');
   const byTagGate = useEntitlement('offline.bulkByTag');
   const [busy, setBusy] = useState<string | null>(null);

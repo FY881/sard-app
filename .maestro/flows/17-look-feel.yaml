@@ -8,7 +8,10 @@ name: Sard 1.1 look & feel (themes, ornaments, drop cap)
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-36-look-feel
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-37-look-feel-b
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-38-look-feel-c
+- runFlow: ../subflows/healthy.yaml

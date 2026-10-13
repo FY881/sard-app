@@ -13,3 +13,4 @@ appId: app.sard.reader
     optional: true
 - waitForAnimationToEnd:
     timeout: 5000
+- runFlow: healthy.yaml

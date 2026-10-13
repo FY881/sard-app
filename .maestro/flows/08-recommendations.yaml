@@ -7,5 +7,7 @@ appId: app.sard.reader
 - waitForAnimationToEnd:
     timeout: 10000
 - takeScreenshot: 22-recommendations
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: 22-recommendations-b
+- runFlow: ../subflows/healthy.yaml

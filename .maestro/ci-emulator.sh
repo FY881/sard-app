@@ -26,5 +26,7 @@ adb shell settings put global window_animation_scale 0
 adb shell settings put global transition_animation_scale 0
 adb shell settings put global animator_duration_scale 0
 bash .maestro/run-screens.sh > shots/run.log 2>&1
-echo "screens exit $?"
+rc=$?
+echo "screens exit $rc"
 adb emu kill || true
+exit $rc

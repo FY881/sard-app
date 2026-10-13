@@ -8,11 +8,13 @@ name: Sard 1.1 privacy - set a PIN, then always remove it so later flows are not
 - waitForAnimationToEnd:
     timeout: 8000
 - takeScreenshot: v11-39-privacy
+- runFlow: ../subflows/healthy.yaml
 - tapOn:
     id: "sard-set-pin"
     optional: true
 - waitForAnimationToEnd
 - takeScreenshot: v11-40-pin-setup
+- runFlow: ../subflows/healthy.yaml
 - tapOn: { id: "sard-pin-1", optional: true }
 - tapOn: { id: "sard-pin-2", optional: true }
 - tapOn: { id: "sard-pin-3", optional: true }
@@ -20,6 +22,7 @@ name: Sard 1.1 privacy - set a PIN, then always remove it so later flows are not
 - tapOn: { id: "sard-pin-ok", optional: true }
 - waitForAnimationToEnd
 - takeScreenshot: v11-41-pin-confirm
+- runFlow: ../subflows/healthy.yaml
 - tapOn: { id: "sard-pin-1", optional: true }
 - tapOn: { id: "sard-pin-2", optional: true }
 - tapOn: { id: "sard-pin-3", optional: true }
@@ -27,6 +30,7 @@ name: Sard 1.1 privacy - set a PIN, then always remove it so later flows are not
 - tapOn: { id: "sard-pin-ok", optional: true }
 - waitForAnimationToEnd
 - takeScreenshot: v11-42-privacy-pin-set
+- runFlow: ../subflows/healthy.yaml
 # Always remove the PIN again: «إيقاف القفل وحذف الرمز» asks for the PIN first.
 - scrollUntilVisible:
     element:
@@ -45,5 +49,7 @@ name: Sard 1.1 privacy - set a PIN, then always remove it so later flows are not
 - tapOn: { id: "sard-pin-ok", optional: true }
 - waitForAnimationToEnd
 - takeScreenshot: v11-43-privacy-pin-removed
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: v11-44-privacy-b
+- runFlow: ../subflows/healthy.yaml

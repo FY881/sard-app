@@ -12,7 +12,7 @@ import { FEATURES } from '../../membership/features';
 import { num, t, tr } from '../../i18n';
 import { Card, Muted, Row, SectionTitle, SwitchRow, TierBadge } from '../ui';
 import { ChoiceDialog, TextPromptDialog } from './dialogs';
-import { agentScheduleStore, customAgentsStore } from '../store';
+import { agentScheduleStore, customAgentsStore, useMmkvState } from '../store';
 import { sendAgentMessage } from '../../agents/agentChat';
 import { runChapterWatcher } from '../../agents/watcher';
 import { getRecommendations } from '../../agents/recommender';
@@ -44,8 +44,8 @@ export const runCustomAgent = async (commands: string[]) => {
 export const AgentsPlusSection = ({ onOpenChat }: { onOpenChat: () => void }) => {
   const theme = useTheme();
   const sched = useEntitlement('agents.schedule');
-  const [s, setS] = agentScheduleStore.use();
-  const [agents, setAgents] = customAgentsStore.use();
+  const [s, setS] = useMmkvState(agentScheduleStore);
+  const [agents, setAgents] = useMmkvState(customAgentsStore);
   const custom = useEntitlement('agents.custom', agents.length);
   const [intervalPick, setIntervalPick] = useState(false);
   const [editing, setEditing] = useState<null | { id?: string; step: 'name' | 'cmds'; name?: string; cmds?: string }>(null);

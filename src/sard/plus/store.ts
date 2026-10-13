@@ -17,14 +17,16 @@ export interface MmkvState<T> {
   get: () => T;
   set: (v: T) => void;
   update: (fn: (v: T) => T) => T;
-  use: () => [T, (v: T) => void];
 }
 
 export const mmkvState = <T>(key: string, fallback: () => T, merge = true): MmkvState<T> => {
   const get = (): T => {
     const v = getMMKVObject<T>(key);
     if (v === undefined || v === null) return fallback();
-    if (merge && typeof v === 'object' && !Array.isArray(v)) return { ...fallback(), ...v };
+    const fb = fallback();
+    // Corrupt / old-shape value: never hand an array-typed store a non-array (`.length` crashes).
+    if (Array.isArray(fb) && !Array.isArray(v)) return fb;
+    if (merge && typeof v === 'object' && !Array.isArray(v)) return { ...fb, ...v };
     return v;
   };
   const set = (v: T) => setMMKVObject(key, v);
@@ -33,19 +35,30 @@ export const mmkvState = <T>(key: string, fallback: () => T, merge = true): Mmkv
     set(next);
     return next;
   };
-  const use = (): [T, (v: T) => void] => {
-    const [value, setValue] = useState<T>(get);
-    useEffect(() => {
-      setValue(get());
-      // Optional chaining: some test doubles of MMKV have no listener API.
-      const sub = MMKVStorage.addOnValueChangedListener?.(k => {
-        if (k === key) setValue(get());
-      });
-      return () => sub?.remove();
-    }, []);
-    return [value, set];
-  };
-  return { key, get, set, update, use };
+  return { key, get, set, update };
+};
+
+/**
+ * React hook for an `mmkvState` store: re-renders when its MMKV key changes.
+ *
+ * This MUST be a top-level function whose name starts with `use`. It used to be
+ * a `store.use()` method, but the React Compiler only recognises hooks by the
+ * `use[A-Z0-9]…` naming rule, so it treated `store.use()` as a plain call and
+ * memoised it (called once, then skipped on re-render). That changed the hook
+ * count between renders and crashed every «سَرد+» screen with "Rendered fewer
+ * hooks than expected" / "Cannot read property 'length' of undefined".
+ */
+export const useMmkvState = <T>(store: MmkvState<T>): [T, (v: T) => void] => {
+  const [value, setValue] = useState<T>(store.get);
+  useEffect(() => {
+    setValue(store.get());
+    // Optional chaining: some test doubles of MMKV have no listener API.
+    const sub = MMKVStorage.addOnValueChangedListener?.(k => {
+      if (k === store.key) setValue(store.get());
+    });
+    return () => sub?.remove();
+  }, [store]);
+  return [value, store.set];
 };
 
 export type PageSound = 'off' | 'paper' | 'click' | 'chime';

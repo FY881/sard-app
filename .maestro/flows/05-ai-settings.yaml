@@ -7,5 +7,7 @@ appId: app.sard.reader
 - waitForAnimationToEnd:
     timeout: 10000
 - takeScreenshot: 18-ai-settings
+- runFlow: ../subflows/healthy.yaml
 - scroll
 - takeScreenshot: 18-ai-settings-b
+- runFlow: ../subflows/healthy.yaml

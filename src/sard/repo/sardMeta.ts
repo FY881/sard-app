@@ -41,7 +41,7 @@ export interface SardRepoManifest {
 
 /**
  * Version `minAppVersion` is compared with: the LNReader plugin API level this
- * fork implements (package.json "version", 2.1.4), which is what repos target.
+ * fork implements (upstream LNReader 2.1.4; the app itself is versioned 1.x), which is what repos target.
  */
 export const PLUGIN_API_VERSION = '2.1.4';
 
